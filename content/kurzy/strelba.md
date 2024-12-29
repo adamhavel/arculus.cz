@@ -1,5 +1,6 @@
 ---
-title: "Střelba"
+title: "Střelecké kurzy"
+menuTitle: "Střelba"
 description: "Zvládněte zbraně s jistotou a přesností – naučíme vás vše od základů po pokročilé techniky."
 image: "/images/image.jpg"
 weight: 1

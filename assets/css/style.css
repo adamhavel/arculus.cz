@@ -319,7 +319,7 @@ main > header {
   .headingWrapper {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     gap: 2em;
     margin-top: 1.25em;
     padding: 0;

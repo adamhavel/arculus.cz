@@ -2,13 +2,16 @@
   <ul>
     {{ range sort .Site.Sections.ByWeight }}
     <li>
-      <a href="{{ .RelPermalink }}" class="{{ if eq .RelPermalink $.RelPermalink }}is-active{{ end }}">{{ .Title }}</a>
+      <a href="{{ .RelPermalink }}" class="{{ if eq .RelPermalink $.RelPermalink }}is-active{{ end }}">{{
+        .Params.menuTitle | default .Title }}
+      </a>
       {{ if .Pages }}
       <ul>
         {{ range sort .Pages.ByWeight }}
         <li>
-          <a href="{{ .RelPermalink }}" class="{{ if eq .RelPermalink $.RelPermalink }}is-active{{ end }}">{{ .Title
-            }}</a>
+          <a href="{{ .RelPermalink }}" class="{{ if eq .RelPermalink $.RelPermalink }}is-active{{ end }}">
+            {{ .Params.menuTitle | default .Title }}
+          </a>
         </li>
         {{ end }}
       </ul>
