@@ -1,7 +1,7 @@
 ---
 title: "Zdravověda"
 description: "Naučte se poskytovat první pomoc a zachraňovat životy v krizových situacích."
-image: "/images/image.jpg"
+image: "/images/zdravoveda.jpg"
 weight: 3
 ---
 

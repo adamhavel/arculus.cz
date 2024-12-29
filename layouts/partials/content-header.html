@@ -1,7 +1,12 @@
 <header>
-  <div class="imageWrapper">
-    <img src="{{ .Params.image }}" alt="" />
-  </div>
+  {{ with .Params.image }}
+    <div class="imageWrapper">
+      {{ with resources.Get . | images.Filter images.Grayscale }}
+        {{ $resized := .Fill "1200x400 webp q70 bottom" }}
+        <img src="{{ $resized.RelPermalink }}" role="presentation" />
+      {{ end }}
+    </div>
+  {{ end }} 
   <div class="headingWrapper">
     <h2>{{ .Title }}</h2>
     {{ with .Params.description }}
