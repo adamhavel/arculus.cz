@@ -1,0 +1,11 @@
+<header>
+  <div class="imageWrapper">
+    <img src="{{ .Params.image }}" alt="" />
+  </div>
+  <div class="headingWrapper">
+    <h2>{{ .Title }}</h2>
+    {{ with .Params.description }}
+    <p>{{ . }}</p>
+    {{ end }}
+  </div>
+</header>

@@ -1,0 +1,19 @@
+<nav>
+  <ul>
+    {{ range sort .Site.Sections.ByWeight }}
+    <li>
+      <a href="{{ .RelPermalink }}" class="{{ if eq .RelPermalink $.RelPermalink }}is-active{{ end }}">{{ .Title }}</a>
+      {{ if .Pages }}
+      <ul>
+        {{ range sort .Pages.ByWeight }}
+        <li>
+          <a href="{{ .RelPermalink }}" class="{{ if eq .RelPermalink $.RelPermalink }}is-active{{ end }}">{{ .Title
+            }}</a>
+        </li>
+        {{ end }}
+      </ul>
+      {{ end }}
+    </li>
+    {{ end }}
+  </ul>
+</nav>

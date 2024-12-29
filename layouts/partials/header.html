@@ -1,0 +1,12 @@
+<header>
+  <h1>
+    <a href="{{ "/" | relLangURL }}">
+      {{ partial "logo.svg" . }}
+      <p>
+        {{ range $index, $element := split .Site.Title "" }}
+          <span>{{ $element }}</span>
+        {{ end }}
+      </p>
+    </a>
+  </h1>
+</header>

@@ -1,0 +1,5 @@
+baseURL = "http://arculus.cz"
+languageCode = "cs-cz"
+defaultContentLanguage = "cs"
+title = "Arculus"
+disableKinds = ["taxonomy", "taxonomyTerm", "sitemap", "RSS"]
