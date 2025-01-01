@@ -6,7 +6,6 @@
   --glow: 0 0 0.2em var(--color-accent);
   --glow-strong: 0 0 0.5em var(--color-accent);
   --transition-default: 0.3s;
-  --font-heading: "Oswald", sans-serif;
   --background-scanlines: linear-gradient(
     rgba(0, 0, 0, 0) 50%,
     var(--color-background) 50%
@@ -34,4 +33,11 @@
 	100% {
 		filter: brightness(1);
 	}
+}
+
+@font-face {
+    font-family: 'Arculus';
+    src: url('/fonts/arculus.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
 }
