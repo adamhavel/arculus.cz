@@ -16,3 +16,5 @@ Naše střelecké kurzy jsou navrženy tak, aby vyhověly široké škále stře
 - **Pokročilé techniky:** Dynamická střelba, řešení střeleckých situací pod tlakem a další techniky pro zlepšení efektivity a přesnosti.
 
 Ať už jste začátečník, který se chce naučit základy bezpečného ovládání zbraní, nebo zkušený střelec hledající nové výzvy, naše kurzy přizpůsobíme vašim potřebám. Naši instruktoři, kteří mají mnohaleté zkušenosti v oboru, vás provedou každým krokem s maximální profesionalitou a individuálním přístupem.
+
+{{< courses >}}

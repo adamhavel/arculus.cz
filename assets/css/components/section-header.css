@@ -1,9 +1,8 @@
 .section-header {
 	border-radius: 1em;
-	margin: -1.5em;
-	padding: 1.5em;
+	margin: 0 -1.5em 3em;
+	padding: 1.375em 1.5em;
 	background: var(--color-box);
-	margin-bottom: 3em;
 }
 
 .section-header__image {
@@ -65,10 +64,10 @@
 }
 
 .section-header__description {
-	font-size: 0.875em;
+	font-size: 0.75em;
 	opacity: 0.5;
 	text-wrap: balance;
 	text-align: right;
-	line-height: 1.375;
 	max-width: 50%;
+	margin-top: -0.3em;
 }

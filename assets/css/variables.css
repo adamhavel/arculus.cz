@@ -1,9 +1,10 @@
 :root {
   --color-background: #151515;
-  --color-box: rgba(0, 0, 0, 0.15);
+  --color-box: rgba(0, 0, 0, 0.2);
   --color-text: rgba(255, 255, 255, 0.7);
-  --color-accent: rgba(34, 170, 34, 0.8);
+  --color-accent: rgba(34, 170, 34, 1);
   --glow: 0 0 0.2em var(--color-accent);
+  --glow-weak: 0 0 0.1em var(--color-accent);
   --glow-strong: 0 0 0.5em var(--color-accent);
   --transition-default: 0.3s;
   --background-scanlines: linear-gradient(

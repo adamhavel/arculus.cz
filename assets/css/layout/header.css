@@ -63,13 +63,13 @@
         color: var(--color-accent);
 
         svg {
-            opacity: 1;
+            opacity: .8;
             transform: none;
             filter: drop-shadow(var(--glow));
         }
 
 		p {
-			opacity: 1;
+			opacity: .8;
             text-shadow: var(--glow-strong);
 		}
 

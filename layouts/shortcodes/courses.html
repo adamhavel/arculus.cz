@@ -1,0 +1,26 @@
+{{ range $id, $data := index .Site.Data.courses .Page.File.ContentBaseName }}
+    <section class="course" id="#{{ $id }}">
+        {{ with resources.Get $data.image }}
+            <div class="course__image">
+                <img src="{{ .RelPermalink }}" role="presentation" />
+            </div>
+        {{ end }}
+        {{ with $data }}
+            <h4 class="course__title">{{ .title }}</h4>
+            <div class="course__description">
+                <p>{{ .description }}</p>
+                {{ with .requirements }}
+                <p><strong>Požadavky:</strong> {{ delimit . ", " }}</p>
+                {{ end }}
+            </div>
+            <ul class="course__details">
+                <li><strong>Délka</strong> <span>{{ .duration }} hodin</span></li>
+                <li><strong>Účastníků</strong> <span>{{ delimit .participants "-" }}</span></li>
+                <li><strong>Instruktoři</strong> <span>{{ delimit .instructors "-" }}</span></li>
+                <li><strong>Obtížnost</strong> <span class="course__difficulty">{{ range seq .level }}<span>⬢</span>{{ end
+                        }}</span></li>
+                <li><strong>Cena</strong> <span>{{ .price | lang.FormatNumber 0 }} Kč</span></li>
+            </ul>
+        {{ end }}
+    </section>
+{{ end }}

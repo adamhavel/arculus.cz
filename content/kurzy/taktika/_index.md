@@ -13,3 +13,5 @@ Naše taktické kurzy jsou navrženy tak, aby vás připravily na různé krizov
 - **Reakce na krizové situace:** Jak jednat v různých krizových situacích.
 - **Týmová spolupráce:** Efektivní komunikace a spolupráce v týmu.
 - **Pokročilé taktiky:** Pokročilé techniky pro zvládání složitých situací.
+
+{{< courses >}}
