@@ -1,6 +1,6 @@
-<header>
-  <h1>
-    <a href="{{ "/" | relLangURL }}">
+<header class="header">
+  <h1 class="header__title">
+    <a href="{{ "/" | relLangURL }}" data-turbo-frame="content">
       {{ partial "logo.svg" . }}
       <p>
         {{ range $index, $element := split .Site.Title "" }}

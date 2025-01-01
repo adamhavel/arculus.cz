@@ -3,3 +3,14 @@ languageCode = "cs-cz"
 defaultContentLanguage = "cs"
 title = "Arculus"
 disableKinds = ["taxonomy", "taxonomyTerm", "sitemap", "RSS"]
+
+[server]
+  [[server.headers]]
+    for = "/*"
+    [server.headers.values]
+      Cache-Control = "no-cache"
+      Turbo-Visit-Control = "reload"
+
+[build.processing.css]
+  includePaths = ["assets/css"]
+  postCSS = true

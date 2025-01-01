@@ -3,17 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ .Title }}</title>
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
-  {{ with resources.Get "css/style.css" | minify | fingerprint }}
+  {{ $opts := dict "inlineImports" true "noMap" true }}
+  {{ with resources.Get "css/style.css" | postCSS $opts | minify }}
     <style>
       {{ .Content | safeCSS }}
     </style>
   {{ end }}
+  <script src="https://unpkg.com/@hotwired/turbo@8.0.12/dist/turbo.es2017-umd.js" type="module"></script>
 </head>
 <body>
-  {{ partial "header.html" . }} {{ partial "nav.html" . }}
-  <main>{{ block "main" . }}{{ end }}</main>
+  {{ partial "header.html" . }}
+  <turbo-frame id="content" data-turbo-action="advance">
+    {{ partial "nav.html" . }}
+    <main class="main">{{ block "main" . }}{{ end }}</main>
+  </turbo-frame>
   {{ partial "footer.html" . }}
 </body>
 </html>

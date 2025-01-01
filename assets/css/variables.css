@@ -1,0 +1,37 @@
+:root {
+  --color-background: #151515;
+  --color-box: rgba(0, 0, 0, 0.15);
+  --color-text: rgba(255, 255, 255, 0.7);
+  --color-accent: rgba(34, 170, 34, 0.8);
+  --glow: 0 0 0.2em var(--color-accent);
+  --glow-strong: 0 0 0.5em var(--color-accent);
+  --transition-default: 0.3s;
+  --font-heading: "Oswald", sans-serif;
+  --background-scanlines: linear-gradient(
+    rgba(0, 0, 0, 0) 50%,
+    var(--color-background) 50%
+  );
+  --clip-hexagon: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  --ratio-hexagon: 0.866;
+}
+
+@keyframes scanlines {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(4px);
+	}
+}
+
+@keyframes flicker {
+	0% {
+		filter: brightness(1);
+	}
+	50% {
+		filter: brightness(1.1);
+	}
+	100% {
+		filter: brightness(1);
+	}
+}

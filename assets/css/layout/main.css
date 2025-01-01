@@ -1,0 +1,52 @@
+.main {
+	grid-row: span 2;
+	grid-column: 2;
+	padding-top: 1.5em;
+
+	> * + * {
+		margin-top: 1em;
+	}
+
+	p {
+		text-wrap: pretty;
+		opacity: 0.8;
+	}
+
+	ul {
+		opacity: 0.8;
+		text-wrap: pretty;
+
+		+ * {
+			margin-top: 2em;
+		}
+
+		> * + * {
+			margin-top: 0.5em;
+		}
+	}
+
+	li {
+		position: relative;
+		padding-left: 1.25em;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0.6em;
+			clip-path: var(--clip-hexagon);
+			width: calc(0.6em * var(--ratio-hexagon));
+			height: 0.6em;
+			background: currentColor;
+			opacity: 0.9;
+		}
+	}
+
+	h3 {
+		margin-top: 2rem;
+		font-family: var(--font-heading);
+		font-size: 1.5rem;
+		letter-spacing: 0.05em;
+		font-weight: 400;
+	}
+}

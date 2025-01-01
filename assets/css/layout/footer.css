@@ -1,0 +1,7 @@
+.footer {
+	grid-column: span 2;
+	text-align: right;
+	letter-spacing: 0.2em;
+	opacity: 0.675;
+	font-size: 0.675em;
+}

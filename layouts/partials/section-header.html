@@ -1,0 +1,16 @@
+<header class="section-header">
+  {{ with .Params.image }}
+    <div class="section-header__image">
+      {{ with resources.Get . | images.Filter images.Grayscale }}
+        {{ $resized := .Fill "1500x500 webp q70 bottom" }}
+        <img src="{{ $resized.RelPermalink }}" role="presentation" />
+      {{ end }}
+    </div>
+  {{ end }} 
+  <div class="section-header__layout">
+    <h2 class="section-header__heading">{{ .Title }}</h2>
+    {{ with .Params.description }}
+    <p class="section-header__description">{{ . }}</p>
+    {{ end }}
+  </div>
+</header>

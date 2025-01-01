@@ -1,12 +1,12 @@
-<nav>
-  <ul>
+<nav class="nav">
+  <ul class="nav__list">
     {{ range sort .Site.Sections.ByWeight }}
-    <li>
-      <a href="{{ .RelPermalink }}" class="{{ if eq .RelPermalink $.RelPermalink }}is-active{{ end }}">{{
-        .Params.menuTitle | default .Title }}
+    <li class="nav__item">
+      <a href="{{ .RelPermalink }}" class="{{ if eq .RelPermalink $.RelPermalink }}is-active{{ end }}">
+        {{ .Params.menuTitle | default .Title }}
       </a>
       {{ if .Pages }}
-      <ul>
+      <ul class="nav__sublist">
         {{ range sort .Pages.ByWeight }}
         <li>
           <a href="{{ .RelPermalink }}" class="{{ if eq .RelPermalink $.RelPermalink }}is-active{{ end }}">
