@@ -1,14 +1,12 @@
 ---
-title: "Bojovník"
-description: "Staňte se součástí našeho týmu a získejte jedinečné zkušenosti a dovednosti."
-image: "/images/image.jpg"
+title: Bojovník
+description: ""
+image: /images/image.jpg
 weight: 1
 ---
 
-Hledáme nové bojovníky, kteří se chtějí stát součástí našeho týmu a získat jedinečné zkušenosti a dovednosti.
+Hledáme bývalé policisty či vojáky, případně ty, kteří se chystají odejít a kteří mají zkušenosti z:
 
-### Co nabízíme?
-
-- **Výcvik:** Profesionální výcvik a rozvoj dovedností.
-- **Týmová spolupráce:** Práce v dynamickém a profesionálním týmu.
-- **Kariérní růst:** Možnosti kariérního růstu a rozvoje.
+- **Hlídkového oddělení v přímém výkonu**
+- **Pořádkové nebo zásahové jednotky**
+- **Armádních bojových útvarů**
