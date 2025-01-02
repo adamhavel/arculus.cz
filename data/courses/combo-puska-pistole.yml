@@ -1,0 +1,17 @@
+type: strelba
+title: COMBO puška + pistole
+description: Kurz kombinuje manipulaci a střelbu z krátké a dlouhé zbraně
+  (vhodné pro uchazeče, kteří prošli kurzy Puška a Pistole III). Kurz se věnuje
+  vyhodnocování situace z taktického hlediska a vzdálenosti cíle, dále bezpečné
+  a účinné záměně zbraně a v jakých situacích a za jakých podmínek ji provést.
+duration: 6
+price: 2500
+participants:
+  min: 8
+  max: 15
+instructors:
+  min: 2
+image: images/gun.png
+level: 4
+requirements:
+  - minimálně 200 nábojů
