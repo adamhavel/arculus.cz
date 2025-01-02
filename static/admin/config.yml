@@ -1,54 +1,82 @@
 backend:
-  name: git-gateway
-  branch: main
+    name: git-gateway
+    branch: main
 
 media_folder: "assets/images"
 public_folder: "/images"
 
 collections:
-  - name: "courses"
-    label: "Kurzy"
-    folder: "content/kurzy/strelba"
-    create: true
-    filter: {field: "build.render", value: "never"}
-    fields:
-      - {label: "Typ", name: "type", widget: "string"}
-      - {label: "Místo", name: "location", widget: "string"}
-      - {label: "Datum", name: "time", widget: "datetime"}
-      - {label: "Volná místa", name: "spots", widget: "number"}
-      - name: "build"
-        label: "Build Settings"
-        widget: "object"
-        fields:
-          - {label: "List", name: "list", widget: "hidden", default: "always"}
-          - {label: "Render", name: "render", widget: "hidden", default: "never"}
+    - name: "pages"
+      label: "Sekce"
+      folder: "content"
+      create: true
+      nested:
+          depth: 3
+          summary: "{{title}}"
+      editor:
+          preview: false
+      fields:
+          - { label: "Název", name: "title", widget: "string" }
+          - { label: "Popis", name: "description", widget: "text" }
+          - { label: "Obrázek", name: "image", widget: "image" }
+          - { label: "Pořadí", name: "weight", widget: "number" }
+          - { label: "Obsah", name: "body", widget: "markdown" }
 
-  - name: "course-types"
-    label: "Typy kurzů"
-    folder: "data/courses"
-    create: true
-    extension: "yml"
-    format: "yml"
-    nested:
-      depth: 100
-      summary: "{{title}}"
-    fields:
-      - {label: "Název", name: "title", widget: "string"}
-      - {label: "Popis", name: "description", widget: "text"}
-      - {label: "Délka", name: "duration", widget: "number"}
-      - {label: "Cena", name: "price", widget: "number"}
-      - name: "participants"
-        label: "Počet účastníků"
-        widget: "object"
-        fields:
-          - {label: "Minimum", name: "0", widget: "number"}
-          - {label: "Maximum", name: "1", widget: "number"}
-      - name: "instructors"
-        label: "Počet instruktorů"
-        widget: "object"
-        fields:
-          - {label: "Minimum", name: "0", widget: "number"}
-          - {label: "Maximum", name: "1", widget: "number"}
-      - {label: "Obrázek", name: "image", widget: "image"}
-      - {label: "Úroveň", name: "level", widget: "number"}
-      - {label: "Požadavky", name: "requirements", widget: "list"}
+    - name: "courses"
+      label: "Kurzy"
+      folder: "content/kurzy/strelba"
+      create: true
+      filter: { field: "build.render", value: "never" }
+      fields:
+          - { label: "Typ", name: "type", widget: "string" }
+          - { label: "Místo", name: "location", widget: "string" }
+          - { label: "Datum", name: "time", widget: "datetime" }
+          - { label: "Volná místa", name: "spots", widget: "number" }
+          - name: "build"
+            label: "Build Settings"
+            widget: "object"
+            fields:
+                - {
+                      label: "List",
+                      name: "list",
+                      widget: "hidden",
+                      default: "always",
+                  }
+                - {
+                      label: "Render",
+                      name: "render",
+                      widget: "hidden",
+                      default: "never",
+                  }
+
+    - name: "course-types"
+      label: "Typy kurzů"
+      folder: "data/courses"
+      create: true
+      extension: "yml"
+      format: "yml"
+      nested:
+          depth: 100
+          summary: "{{title}}"
+      editor:
+          preview: false
+      fields:
+          - { label: "Název", name: "title", widget: "string" }
+          - { label: "Popis", name: "description", widget: "text" }
+          - { label: "Délka", name: "duration", widget: "number" }
+          - { label: "Cena", name: "price", widget: "number" }
+          - name: "participants"
+            label: "Účastníků"
+            widget: "list"
+            min: 1
+            max: 2
+            field: { label: "Počet", name: "participant", widget: "number" }
+          - name: "instructors"
+            label: "Instruktoři"
+            widget: "list"
+            min: 1
+            max: 2
+            field: { label: "Počet", name: "participant", widget: "number" }
+          - { label: "Obrázek", name: "image", widget: "image" }
+          - { label: "Úroveň", name: "level", widget: "number" }
+          - { label: "Požadavky", name: "requirements", widget: "list" }
