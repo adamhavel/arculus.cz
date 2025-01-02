@@ -1,6 +1,6 @@
 ---
-title: "Kontakt"
-image: "/images/image.jpg"
+title: Kontakt
+image: /images/image.jpg
 weight: 4
 ---
 
@@ -10,6 +10,5 @@ Máte-li jakékoli dotazy nebo potřebujete více informací o našich kurzech a
 
 ### Kontaktujte nás
 
-- **Telefon:** +420 123 456 789
+- **Telefon:** +420 573 033 063
 - **Email:** info@arculus.cz
-- **Adresa:** Ulice 123, 110 00 Praha, Česká republika
