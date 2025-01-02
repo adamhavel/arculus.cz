@@ -9,7 +9,8 @@ participants:
   min: 8
   max: 15
 instructors:
-  min: 4
+  min: 2
+  max: 3
 image: images/rifle.png
 level: 3
 requirements:
