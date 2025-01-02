@@ -1,7 +1,8 @@
 ---
-title: "Taktika"
-description: "Získejte taktické dovednosti a naučte se, jak efektivně reagovat v krizových situacích."
-image: "/images/image.jpg"
+title: Taktika
+description: Získejte taktické dovednosti a naučte se, jak efektivně reagovat v
+  krizových situacích.
+image: /images/image.jpg
 weight: 2
 ---
 
@@ -13,5 +14,7 @@ Naše taktické kurzy jsou navrženy tak, aby vás připravily na různé krizov
 - **Reakce na krizové situace:** Jak jednat v různých krizových situacích.
 - **Týmová spolupráce:** Efektivní komunikace a spolupráce v týmu.
 - **Pokročilé taktiky:** Pokročilé techniky pro zvládání složitých situací.
+
+Naše kurzy vedou instruktoři s bohatými zkušenostmi z reálných situací. Jejich odborné znalosti a praxe vám zajistí kvalitní výuku a efektivní trénink. Navíc tréninkové prostředí a scénáře přizpůsobujeme vašim specifickým potřebám a cílům.
 
 {{< courses >}}
