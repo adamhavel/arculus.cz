@@ -1,6 +1,12 @@
-title: "Pistole I"
-type: "strelba"
-description: "Základní střelecký kurz pro čerstvé držitele ZP, ale i pro pokročilejší střelce, kteří chtějí prověřit své základní dovednosti pro sportovní, taktickou nebo obranou střelbu. Kurz je zaměřen na bezpečnou manipulaci se zbraní, způsoby nošení krátké zbraně, jak ve skryté, tak i viditelné variantě. Dále na tomto kurzu probereme správný postoj a práci s mířidly, práci na spoušti, ale i vhodný výběr zbraně, doplňků na zbraň a v neposlední řadě údržbu."
+type: strelba
+title: Pistole I
+description: Základní střelecký kurz pro čerstvé držitele ZP ale i pokročilejší
+  střelce, kteří chtějí prověřit své základní dovednosti pro sportovní,
+  taktickou nebo obrannou střelbu. Kurz je zaměřen na bezpečnou manipulaci se
+  zbraní, způsoby nošení krátké zbraně jak ve skryté, tak viditelné variantě.
+  Dále na tomto kurzu probereme správný postoj a práci s mířidly, práci na
+  spoušti, ale i vhodný výběr zbraně, doplňků na zbraň a v neposlední řadě
+  údržbu.
 duration: 6
 price: 2000
 participants:
@@ -8,7 +14,7 @@ participants:
   max: 15
 instructors:
   min: 2
-image: "images/gun.png"
+image: images/gun.png
 level: 1
 requirements:
- - "minimálně 200 nábojů"
+  - minimálně 200 nábojů
