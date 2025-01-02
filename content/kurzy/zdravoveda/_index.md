@@ -15,3 +15,7 @@ Naše kurzy zdravovědy vás naučí, jak poskytovat první pomoc a zachraňovat
 - **Pokročilé techniky:** Pokročilé techniky první pomoci a krizového managementu.
 
 {{< courses >}}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nulla ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nulla ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nulla ac.
+
+
