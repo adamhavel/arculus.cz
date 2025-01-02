@@ -1,0 +1,14 @@
+type: taktika
+title: CQB se střelbou
+description: Lorem ipsum
+duration: 6
+price: 1000
+participants:
+  min: 2
+instructors:
+  min: 2
+image: /images/knife.png
+level: 3
+requirements:
+  - aaa
+  - bbb
