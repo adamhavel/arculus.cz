@@ -1,14 +1,18 @@
-title: "Puška II"
-type: "strelba"
-description: "Navazující kurz, určen pro pokročilejší střelce (vhodný pro absolventy kurzu Puška I) a je zaměřen na střelbu při přehození do druhého ramena, při přemodlení a na více ranou střelbu na cíl. Dále si vysvětlíme a procvičíme způsoby přebíjení a řešení závad na zbrani. Obsahem kurzu je i střelba za zástěnou a z okenního otvoru."
+type: strelba
+title: Puška II
+description: Navazující kurz určený pro pokročilejší střelce (vhodný pro
+  absolventy kurzu Puška I), zaměřený na střelbu po přehození do druhého ramene,
+  po přemodlení (přehození úchopu zbraně) a na vícerannou střelbu na cíl. Dále
+  si vysvětlíme a procvičíme způsoby přebíjení a řešení závad na zbrani. Obsahem
+  kurzu je i střelba za zástěnou a z okenního otvoru.
 duration: 6
 price: 2200
 participants:
   min: 8
   max: 15
-instructors: 
+instructors:
   min: 2
-image: "images/rifle.png"
-level: 2
+image: images/rifle.png
+level: 3
 requirements:
- - "minimálně 250 nábojů"
+  - minimálně 250 nábojů
