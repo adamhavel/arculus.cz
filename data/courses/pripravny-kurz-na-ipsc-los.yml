@@ -11,7 +11,7 @@ participants:
   max: 15
 instructors:
   min: 2
-image: images/rifle.png
+image: /images/gun.png
 level: 2
 requirements:
   - minimálně 250 nábojů
