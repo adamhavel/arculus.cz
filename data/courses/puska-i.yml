@@ -1,0 +1,19 @@
+type: strelba
+title: Puška I
+description: Základní střelecký kurz pro čerstvé držitele ZP, ale i pokročilejší
+  střelce, kteří chtějí zlepšit svůj základ pro sportovní, taktickou nebo
+  obrannou střelbu. Kurz je zaměřen na bezpečnou manipulaci se zbraní, způsoby
+  nošení dlouhé zbraně, možnosti nastavení a variant popruhu. Dále na tomto
+  kurzu probereme správný postoj, nastavení pušky, práci na spoušti, ale i
+  vhodný výběr zbraně, doplňků na zbraň a v neposlední řadě údržbu a čištění.
+duration: 6
+price: 2200
+participants:
+  min: 8
+  max: 15
+instructors:
+  min: 2
+image: images/rifle.png
+level: 1
+requirements:
+  - minimálně 250 nábojů
