@@ -1,11 +1,17 @@
-{{ range $id, $data := index .Site.Data.courses .Page.File.ContentBaseName }}
-    <section class="course" id="#{{ $id }}">
-        {{ with resources.Get $data.image }}
+{{ $courses := slice }}
+{{ range $key, $value := .Site.Data.courses }}
+    {{ $value = merge $value (dict "id" $key) }}
+    {{ $courses = $courses | append $value }}
+{{ end }}
+{{ $filtered := where $courses "type" .Page.File.ContentBaseName }}
+{{ range $filtered }}
+    <section class="course" id="#{{ .id }}">
+        {{ with resources.Get .image }}
             <div class="course__image">
                 <img src="{{ .RelPermalink }}" role="presentation" />
             </div>
         {{ end }}
-        {{ with $data }}
+      
             <h4 class="course__title">{{ .title }}</h4>
             <div class="course__description">
                 <p>{{ .description }}</p>
@@ -20,6 +26,6 @@
                 <li><strong>Obtížnost</strong> <span class="course__difficulty">{{ range seq .level }}<span>⬢</span>{{ end }}</span></li>
                 <li><strong>Cena</strong> <span>{{ .price | lang.FormatNumber 0 }} Kč</span></li>
             </ul>
-        {{ end }}
+  
     </section>
 {{ end }}

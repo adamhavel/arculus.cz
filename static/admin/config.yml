@@ -55,12 +55,10 @@ collections:
       create: true
       extension: "yml"
       format: "yml"
-      nested:
-          depth: 100
-          summary: "{{title}}"
       editor:
           preview: false
       fields:
+          - { label: "Typ", name: "type", widget: "select", options: ["strelba", "taktika", "zdravoveda"] }
           - { label: "Název", name: "title", widget: "string" }
           - { label: "Popis", name: "description", widget: "text" }
           - { label: "Délka", name: "duration", widget: "number" }
