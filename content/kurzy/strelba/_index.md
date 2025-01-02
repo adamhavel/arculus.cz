@@ -1,8 +1,9 @@
 ---
-title: "Střelecké kurzy"
-menuTitle: "Střelba"
-description: "Zvládněte zbraně s jistotou a přesností – naučíme vás vše od základů po pokročilé techniky."
-image: "/images/image.jpg"
+title: Střelecké kurzy
+menuTitle: Střelba
+description: Zvládněte zbraně s jistotou a přesností – naučíme vás vše od
+  základů po pokročilé techniky.
+image: /images/image.jpg
 weight: 1
 ---
 
@@ -16,5 +17,7 @@ Naše střelecké kurzy jsou navrženy tak, aby vyhověly široké škále stře
 - **Pokročilé techniky:** Dynamická střelba, řešení střeleckých situací pod tlakem a další techniky pro zlepšení efektivity a přesnosti.
 
 Ať už jste začátečník, který se chce naučit základy bezpečného ovládání zbraní, nebo zkušený střelec hledající nové výzvy, naše kurzy přizpůsobíme vašim potřebám. Naši instruktoři, kteří mají mnohaleté zkušenosti v oboru, vás provedou každým krokem s maximální profesionalitou a individuálním přístupem.
+
+**Všechny kurzy jsou zakončeny střeleckými drily. Počet úspěšných zásahů a čas těchto disciplín bude zapsán v certifikátu, který dostane absolvent po dokončení kurzu.**
 
 {{< courses >}}
