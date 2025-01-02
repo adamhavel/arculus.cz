@@ -4,5 +4,5 @@ duration: 8
 price: 1600
 participants: [8, 16]
 instructors: [2]
-image: "icons/first-aid.png"
+image: "images/first-aid.png"
 level: 1
