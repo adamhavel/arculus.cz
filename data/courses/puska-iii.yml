@@ -1,0 +1,16 @@
+type: strelba
+title: Puška III
+description: Kurz pro pokročilejší, zkušenější střelce (vhodné pro střelce kteří
+  absolvovali kurzy Puška I a II). Kurz bude zaměřen na střelbu na více cílů,
+  střelbu za pohybu, střelbu v nestandardních polohách a po přesunu.
+duration: 6
+price: 2200
+participants:
+  min: 8
+  max: 15
+instructors:
+  min: 4
+image: images/rifle.png
+level: 1
+requirements:
+  - minimálně 250 nábojů
