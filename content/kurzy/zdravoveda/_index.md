@@ -10,13 +10,10 @@ Naše kurzy zdravovědy vás naučí nejen základy první pomoci, ale také tec
 
 ### Co se naučíte?
 
-- **Základy první pomoci:** Jak správně poskytnout první pomoc.
-- **Resuscitace:** Techniky resuscitace a použití AED.
-- **Ošetření zranění:** Jak ošetřit různé typy zranění.
-- **Pokročilé techniky:** Pokročilé techniky první pomoci a krizového managementu.
+- **Základy první pomoci:** Jak postupovat při běžných úrazech a akutních stavech, správné techniky resuscitace a použití dostupného vybavení či AED.
+- **První pomoc v ztížených podmínkách:** Jak zvládat zdravotnické úkoly v prostředí s omezenými zdroji nebo pod časovým tlakem.
+- **Bojová medicína:** Techniky aplikované v bojových nebo nebezpečných situacích, kde jde nejen o poskytnutí pomoci, ale i o vaši vlastní bezpečnost.
 
 {{< courses >}}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nulla ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nulla ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nulla ac.
 
 
