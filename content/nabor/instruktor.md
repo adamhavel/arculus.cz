@@ -1,7 +1,7 @@
 ---
-title: "Instruktor"
-description: "Připojte se k našemu týmu jako instruktor a předávejte své znalosti a zkušenosti dalším."
-image: "/images/image.jpg"
+title: Instruktor
+description: ""
+image: /images/image.jpg
 weight: 2
 ---
 
