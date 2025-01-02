@@ -75,6 +75,7 @@ collections:
       folder: "data/courses"
       create: true
       extension: "yml"
+      slug: "{{title | sanitize_string}}"
       format: "yml"
       editor:
           preview: false
@@ -104,7 +105,7 @@ collections:
       label: "Seznam událostí"
       label_singular: "event"
       folder: "data/events"
-      summary: "{{fields.type}} - {{fields.time | date('d. M. YYYY')}}"
+      summary: "{{fields.time | date('d. M. YYYY')}} - {{fields.location}} - {{fields.type}}"
       slug: "{{fields.time | date('YYYY-MM-DD')}}-{{fields.type}}"
       create: true
       extension: "yml"
