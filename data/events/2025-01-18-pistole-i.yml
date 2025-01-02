@@ -1,9 +1,4 @@
----
 type: "pistole-i"
 location: "Blansko"
 time: 2025-01-18
 spots: 3
-build: 
-  list: always
-  render: never
----

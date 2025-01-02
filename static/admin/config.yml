@@ -9,9 +9,6 @@ collections:
     - name: "pages"
       label: "Kurzy"
       folder: "content/kurzy"
-      filter:
-        field: "title"
-        value: "Kurzy"
       create: true
       nested:
           depth: 2
@@ -71,7 +68,7 @@ collections:
           - name: "participants"
             label: "Účastníků"
             widget: "object"
-            fields:
+            fields: 
               - { label: "Minimum", name: "min", widget: "number", min: 1 }
               - { label: "Maximum", name: "max", widget: "number", min: 1, required: false }
           - name: "instructors"
