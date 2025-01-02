@@ -5,6 +5,9 @@ backend:
 media_folder: "assets/images"
 public_folder: "/images"
 
+slug:
+  clean_accents: true
+
 collections:
     - name: "uvod"
       label: "Úvod"
@@ -75,7 +78,6 @@ collections:
       folder: "data/courses"
       create: true
       extension: "yml"
-      slug: "{{title | sanitize_string}}"
       format: "yml"
       editor:
           preview: false
@@ -99,7 +101,7 @@ collections:
               - { label: "Maximum", name: "max", widget: "number", min: 1, required: false }
           - { label: "Obrázek", name: "image", widget: "image" }
           - { label: "Úroveň", name: "level", widget: "number" }
-          - { label: "Požadavky", name: "requirements", widget: "list" }
+          - { label: "Požadavky", name: "requirements", widget: "list", required: false }
 
     - name: "seznam-udalosti"
       label: "Seznam událostí"
