@@ -11,4 +11,12 @@ Kurzy vedou zkušení instruktoři, kteří se věnují střelbě, taktice a prv
 
 Pokud hledáte kurzy, které vám předají praktické zkušenosti a zároveň vás naučí jednat pod tlakem, jste na správném místě. S námi získáte více než jen znalosti – získáte schopnosti, které mohou rozhodnout.
 
+Kurzy probíhají na námi zvolených střelnicích či v námi zvolených budovách, případně po domluvě se zákazníky lze vytvořit individuální kurz na jimi zvoleném místě.
+
 ### Kombinace s dalšími kurzy
+
+Chcete si vyzkoušet, jak zvládnout krizovou situaci komplexně? Nabízíme možnost spojit kurzy zdravovědy s kurzy střelby nebo taktiky (CQB) pro vytvoření realistických scénářů, které vás připraví na skutečné výzvy. V takovém prostředí budete mít možnost zažít, jak reagovat pod tlakem, a naučíte se jednat efektivně, i když situace není ideální.
+
+V případě zájmu o naše kurzy či bližší informace k nim, či datu jejich konání, nás kontaktujte na:
+info@arculus.cz
++420 573 033 063
