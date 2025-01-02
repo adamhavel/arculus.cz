@@ -17,5 +17,5 @@ Naší prioritou je nejen splnit vaše očekávání, ale také překonat je. Sd
 
 Kontaktujte nás na:
 
-- **Telefon:** + 573 033 063
-- **
+- **Telefon:** +420 ‭573 033 063
+- **Email:** info@arculus.cz
