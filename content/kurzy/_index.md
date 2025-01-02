@@ -18,5 +18,6 @@ Kurzy probíhají na námi zvolených střelnicích či v námi zvolených budov
 Chcete si vyzkoušet, jak zvládnout krizovou situaci komplexně? Nabízíme možnost spojit kurzy zdravovědy s kurzy střelby nebo taktiky (CQB) pro vytvoření realistických scénářů, které vás připraví na skutečné výzvy. V takovém prostředí budete mít možnost zažít, jak reagovat pod tlakem, a naučíte se jednat efektivně, i když situace není ideální.
 
 V případě zájmu o naše kurzy či bližší informace k nim, či datu jejich konání, nás kontaktujte na:
+
 - **Telefon:** +420 ‭604 662 888‬
 - **Email:** kurzy@arculus.cz
