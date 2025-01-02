@@ -1,0 +1,17 @@
+type: strelba
+title: Přípravný kurz na IPSC/LOS
+description: >-
+  **Zaměřeno na divizi PCC/DPW**
+
+  Přípravný kurz pro střelce, kteří chtějí zjistit informace a připravit se na závody ve střelbě IPSC nebo LOS. Kurz je vhodný i jako trénink pro zkušenější střelce, kteří se již zmíněných závodů zúčastnili. Na kurzu zodpovíme dotazy na pravidla, kategorie apod. Následovat bude střelecký trénink a zkouška střelecké stage pod dohledem a kontrolou střelby a dodržování pravidel. Zaměřeno na zbraně divize PCC a PDW (včetně konverzí).
+duration: 6
+price: 1500
+participants:
+  min: 8
+  max: 15
+instructors:
+  min: 2
+image: images/rifle.png
+level: 2
+requirements:
+  - minimálně 250 nábojů
