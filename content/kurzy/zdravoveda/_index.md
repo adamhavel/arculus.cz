@@ -14,6 +14,8 @@ Naše kurzy zdravovědy vás naučí nejen základy první pomoci, ale také tec
 - **První pomoc v ztížených podmínkách:** Jak zvládat zdravotnické úkoly v prostředí s omezenými zdroji nebo pod časovým tlakem.
 - **Bojová medicína:** Techniky aplikované v bojových nebo nebezpečných situacích, kde jde nejen o poskytnutí pomoci, ale i o vaši vlastní bezpečnost.
 
+Kurzy jsou vhodné pro začátečníky i mírně pokročilé. Jejich úkolem je naučit a vysvětlit základní život zachraňující úkony podle jednoduchých algoritmů, které zjednodušují a urychlují poskytnutí první pomoci zraněným v nestandardních podmínkách. Jedná se o na sebe navazující kurzy, je tedy vhodné je absolvovat postupně, nicméně není to podmínkou.
+
 {{< courses >}}
 
 
