@@ -5,10 +5,9 @@ image: /images/image.jpg
 weight: 2
 ---
 
-Hledáme nové instruktory, kteří se chtějí připojit k našemu týmu a předávat své znalosti a zkušenosti dalším.
+Na pozici instruktora hledáme zkušené odborníky, kteří mají dlouholeté praktické znalosti v jedné z následujících oblastí:
 
-### Co nabízíme?
+- **Střelba:** Zkušenosti z civilního sektoru nebo ozbrojených složek, například jako střelečtí instruktoři
+- **Zdravověda:** Záchranáři nebo zdravotníci s bohatou praxí v poskytování první pomoci a řešení krizových zdravotnických situací.
 
-- **Výcvik:** Profesionální výcvik a rozvoj dovedností.
-- **Týmová spolupráce:** Práce v dynamickém a profesionálním týmu.
-- **Kariérní růst:** Možnosti kariérního růstu a rozvoje.
+Služební poměr není překážkou. Důležitá je vaše odbornost, schopnost předávat znalosti a ochota spolupracovat v týmu. Pokud jste zkušený profesionál, který se chce podělit o své dovednosti a podílet se na výcviku dalších, rádi vás uvítáme mezi námi.
