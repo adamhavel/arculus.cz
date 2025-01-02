@@ -2,7 +2,10 @@ title: "Zdravotnický kurz I"
 description: "Kurz je vhodný pro začátečníky i mírně pokročilé. Úkolem kurzu je naučit a vysvětlit základní život zachraňující úkony, podle jednoduchých algoritmů, které zjednodušují a urychlují poskytnutí první pomoci zraněným v nestandardních podmínkách. Kurz je rozdělen do několika podkategorií."
 duration: 8
 price: 1600
-participants: [8, 16]
-instructors: [2]
+participants:
+  min: 8
+  max: 16
+instructors:
+  min: 2
 image: "images/first-aid.png"
 level: 1

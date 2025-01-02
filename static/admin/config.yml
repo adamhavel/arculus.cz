@@ -7,11 +7,14 @@ public_folder: "/images"
 
 collections:
     - name: "pages"
-      label: "Sekce"
-      folder: "content"
+      label: "Kurzy"
+      folder: "content/kurzy"
+      filter:
+        field: "title"
+        value: "Kurzy"
       create: true
       nested:
-          depth: 3
+          depth: 2
           summary: "{{title}}"
       editor:
           preview: false
@@ -22,32 +25,32 @@ collections:
           - { label: "Pořadí", name: "weight", widget: "number" }
           - { label: "Obsah", name: "body", widget: "markdown" }
 
-    - name: "courses"
-      label: "Kurzy"
-      folder: "content/kurzy/strelba"
-      create: true
-      filter: { field: "build.render", value: "never" }
-      fields:
-          - { label: "Typ", name: "type", widget: "string" }
-          - { label: "Místo", name: "location", widget: "string" }
-          - { label: "Datum", name: "time", widget: "datetime" }
-          - { label: "Volná místa", name: "spots", widget: "number" }
-          - name: "build"
-            label: "Build Settings"
-            widget: "object"
-            fields:
-                - {
-                      label: "List",
-                      name: "list",
-                      widget: "hidden",
-                      default: "always",
-                  }
-                - {
-                      label: "Render",
-                      name: "render",
-                      widget: "hidden",
-                      default: "never",
-                  }
+    # - name: "courses"
+    #   label: "Kurzy"
+    #   folder: "content/kurzy/strelba"
+    #   create: true
+    #   filter: { field: "build.render", value: "never" }
+    #   fields:
+    #       - { label: "Typ", name: "type", widget: "string" }
+    #       - { label: "Místo", name: "location", widget: "string" }
+    #       - { label: "Datum", name: "time", widget: "datetime" }
+    #       - { label: "Volná místa", name: "spots", widget: "number" }
+    #       - name: "build"
+    #         label: "Build Settings"
+    #         widget: "object"
+    #         fields:
+    #             - {
+    #                   label: "List",
+    #                   name: "list",
+    #                   widget: "hidden",
+    #                   default: "always",
+    #               }
+    #             - {
+    #                   label: "Render",
+    #                   name: "render",
+    #                   widget: "hidden",
+    #                   default: "never",
+    #               }
 
     - name: "course-types"
       label: "Typy kurzů"
@@ -67,16 +70,16 @@ collections:
           - { label: "Cena", name: "price", widget: "number" }
           - name: "participants"
             label: "Účastníků"
-            widget: "list"
-            min: 1
-            max: 2
-            field: { label: "Počet", name: "participant", widget: "number" }
+            widget: "object"
+            fields:
+              - { label: "Minimum", name: "min", widget: "number", min: 1 }
+              - { label: "Maximum", name: "max", widget: "number", min: 1, required: false }
           - name: "instructors"
             label: "Instruktoři"
-            widget: "list"
-            min: 1
-            max: 2
-            field: { label: "Počet", name: "participant", widget: "number" }
+            widget: "object"
+            fields:
+              - { label: "Minimum", name: "min", widget: "number", min: 1 }
+              - { label: "Maximum", name: "max", widget: "number", min: 1, required: false }
           - { label: "Obrázek", name: "image", widget: "image" }
           - { label: "Úroveň", name: "level", widget: "number" }
           - { label: "Požadavky", name: "requirements", widget: "list" }

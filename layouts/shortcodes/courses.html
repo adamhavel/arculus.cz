@@ -15,10 +15,9 @@
             </div>
             <ul class="course__details">
                 <li><strong>Délka</strong> <span>{{ .duration }} hodin</span></li>
-                <li><strong>Účastníků</strong> <span>{{ delimit .participants "-" }}</span></li>
-                <li><strong>Instruktoři</strong> <span>{{ delimit .instructors "-" }}</span></li>
-                <li><strong>Obtížnost</strong> <span class="course__difficulty">{{ range seq .level }}<span>⬢</span>{{ end
-                        }}</span></li>
+                <li><strong>Účastníků</strong> <span>{{ .participants.min }}{{ with .participants.max }}-{{ . }}{{ end }}</span></li>
+                <li><strong>Instruktoři</strong> <span>{{ .instructors.min }}{{ with .instructors.max }}-{{ . }}{{ end }}</span></li>
+                <li><strong>Obtížnost</strong> <span class="course__difficulty">{{ range seq .level }}<span>⬢</span>{{ end }}</span></li>
                 <li><strong>Cena</strong> <span>{{ .price | lang.FormatNumber 0 }} Kč</span></li>
             </ul>
         {{ end }}
