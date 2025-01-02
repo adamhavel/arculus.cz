@@ -16,6 +16,6 @@ participants:
 instructors:
   min: 2
 image: images/gun.png
-level: 1
+level: 2
 requirements:
   - minimálně 200 nábojů
