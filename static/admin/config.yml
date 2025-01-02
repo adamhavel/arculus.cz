@@ -1,0 +1,40 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/images"
+public_folder: "/images"
+
+collections:
+  - name: "courses"
+    label: "Kurzy"
+    folder: "content/kurzy/strelba"
+    create: true
+    filter: {field: "build.render", value: "never"}
+    fields:
+      - {label: "Typ", name: "type", widget: "string"}
+      - {label: "Místo", name: "location", widget: "string"}
+      - {label: "Datum", name: "time", widget: "datetime"}
+      - {label: "Volná místa", name: "spots", widget: "number"}
+      - name: "build"
+        label: "Build Settings"
+        widget: "object"
+        fields:
+          - {label: "List", name: "list", widget: "hidden", default: "always"}
+          - {label: "Render", name: "render", widget: "hidden", default: "never"}
+
+  - name: "course-types"
+    label: "Typy kurzů"
+    folder: "data/courses"
+    create: true
+    extension: "yml"
+    format: "yml"
+    fields:
+      - {label: "Název", name: "title", widget: "string"}
+      - {label: "Popis", name: "description", widget: "text"}
+      - {label: "Délka (h)", name: "duration", widget: "number"}
+      - {label: "Cena", name: "price", widget: "number"}
+      - {label: "Max. účastníků", name: "max_participants", widget: "number"}
+      - {label: "Min. účastníků", name: "min_participants", widget: "number"}
+      - {label: "Počet instruktorů", name: "instructors", widget: "number"}
+      - {label: "Požadavky", name: "requirements", widget: "list"}
