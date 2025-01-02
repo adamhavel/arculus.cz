@@ -6,51 +6,72 @@ media_folder: "assets/images"
 public_folder: "/images"
 
 collections:
-    - name: "pages"
+    - name: "uvod"
+      label: "Úvod"
+      folder: "content"
+      fields:
+        - { label: "Název", name: "title", widget: "string" }
+        - { label: "Obsah", name: "body", widget: "markdown" }
+      editor:
+          preview: false
+
+    - name: "kurzy"
       label: "Kurzy"
       folder: "content/kurzy"
-      create: true
       nested:
           depth: 2
-          summary: "{{title}}"
       editor:
           preview: false
       fields:
           - { label: "Název", name: "title", widget: "string" }
-          - { label: "Popis", name: "description", widget: "text" }
+          - { label: "Popis", name: "description", widget: "text", required: false }
           - { label: "Obrázek", name: "image", widget: "image" }
           - { label: "Pořadí", name: "weight", widget: "number" }
           - { label: "Obsah", name: "body", widget: "markdown" }
 
-    # - name: "courses"
-    #   label: "Kurzy"
-    #   folder: "content/kurzy/strelba"
-    #   create: true
-    #   filter: { field: "build.render", value: "never" }
-    #   fields:
-    #       - { label: "Typ", name: "type", widget: "string" }
-    #       - { label: "Místo", name: "location", widget: "string" }
-    #       - { label: "Datum", name: "time", widget: "datetime" }
-    #       - { label: "Volná místa", name: "spots", widget: "number" }
-    #       - name: "build"
-    #         label: "Build Settings"
-    #         widget: "object"
-    #         fields:
-    #             - {
-    #                   label: "List",
-    #                   name: "list",
-    #                   widget: "hidden",
-    #                   default: "always",
-    #               }
-    #             - {
-    #                   label: "Render",
-    #                   name: "render",
-    #                   widget: "hidden",
-    #                   default: "never",
-    #               }
+    - name: "sluzby"
+      label: "Služby"
+      folder: "content/sluzby"
+      nested:
+          depth: 2
+      editor:
+          preview: false
+      fields:
+          - { label: "Název", name: "title", widget: "string" }
+          - { label: "Popis", name: "description", widget: "text", required: false }
+          - { label: "Obrázek", name: "image", widget: "image" }
+          - { label: "Pořadí", name: "weight", widget: "number" }
+          - { label: "Obsah", name: "body", widget: "markdown" }
 
-    - name: "course-types"
-      label: "Typy kurzů"
+    - name: "nabor"
+      label: "Nábor"
+      folder: "content/nabor"
+      nested:
+          depth: 2
+      editor:
+          preview: false
+      fields:
+          - { label: "Název", name: "title", widget: "string" }
+          - { label: "Popis", name: "description", widget: "text", required: false }
+          - { label: "Obrázek", name: "image", widget: "image" }
+          - { label: "Pořadí", name: "weight", widget: "number" }
+          - { label: "Obsah", name: "body", widget: "markdown" }
+
+    - name: "kontakt"
+      label: "Kontakt"
+      folder: "content/kontakt"
+      editor:
+          preview: false
+      fields:
+          - { label: "Název", name: "title", widget: "string" }
+          - { label: "Popis", name: "description", widget: "text", required: false }
+          - { label: "Obrázek", name: "image", widget: "image" }
+          - { label: "Pořadí", name: "weight", widget: "number" }
+          - { label: "Obsah", name: "body", widget: "markdown" }
+
+    - name: "seznam-kurzu"
+      label: "Seznam kurzů"
+      label_singular: "course"
       folder: "data/courses"
       create: true
       extension: "yml"
@@ -78,3 +99,20 @@ collections:
           - { label: "Obrázek", name: "image", widget: "image" }
           - { label: "Úroveň", name: "level", widget: "number" }
           - { label: "Požadavky", name: "requirements", widget: "list" }
+
+    - name: "seznam-udalosti"
+      label: "Seznam událostí"
+      label_singular: "event"
+      folder: "data/events"
+      summary: "{{fields.type}} - {{fields.time | date('d. M. YYYY')}}"
+      slug: "{{fields.time | date('YYYY-MM-DD')}}-{{fields.type}}"
+      create: true
+      extension: "yml"
+      format: "yml"
+      editor:
+          preview: false
+      fields:
+          - { label: "Typ", name: "type", widget: "relation", collection: "seznam-kurzu", value_field: "{{slug}}", search_fields: ["title"], display_fields: ["title"] }
+          - { label: "Místo", name: "location", widget: "string" }
+          - { label: "Datum", name: "time", widget: "datetime", date_format: "YYYY-MM-DD" }
+          - { label: "Volná místa", name: "spots", widget: "number", min: 0 }
