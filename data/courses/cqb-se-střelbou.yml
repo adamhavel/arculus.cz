@@ -1,0 +1,11 @@
+type: taktika
+title: CQB se střelbou
+description: aaa
+duration: 4
+price: 4
+participants:
+  min: 1
+instructors:
+  min: 2
+image: /images/knife.png
+level: 4
