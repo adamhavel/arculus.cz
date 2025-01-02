@@ -4,6 +4,6 @@ description: Přidejte se k našemu týmu profesionálů
 image: /images/image.jpg
 weight: 3
 ---
-Hledáme motivované a zkušené jedince na níže uvedené pozice. Pokud vás některá z nabízených pozic osloví, kontaktujte nás:
+Hledáme motivované a zkušené jedince na níže uvedené pozice. Pokud vás některá z nabízených pozic osloví, kontaktujte nás na:
 
-- **em
+- **Email:** nabor@arculus.cz
