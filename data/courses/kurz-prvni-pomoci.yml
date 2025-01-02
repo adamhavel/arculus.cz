@@ -1,0 +1,28 @@
+type: zdravoveda
+title: Kurz první pomoci
+description: >-
+  Poskytuje základní znalosti a dovednosti potřebné k rychlému a účinnému
+  poskytnutí pomoci při nehodách, úrazech či náhlých zdravotních komplikacích.
+  Účastníci se naučí správné postupy resuscitace, ošetření ran, zlomenin a
+  dalších akutních stavů. Kurz klade důraz na praktický nácvik a připravuje na
+  zvládání krizových situací v každodenním životě.
+
+  - základy první pomoci
+
+  - volání na tísňové linky
+
+  - algoritmus
+
+  - vysvětlení pojmů
+
+  - použití AED
+duration: 8
+price: 1600
+participants:
+  min: 8
+  max: 16
+instructors:
+  min: 2
+  max: ""
+image: images/first-aid.png
+level: 1
