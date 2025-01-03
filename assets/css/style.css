@@ -6,3 +6,5 @@
 @import "layout/footer.css";
 @import "components/section-header.css";
 @import "components/course.css";
+@import "components/events.css";
+@import "components/event.css";

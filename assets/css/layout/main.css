@@ -52,7 +52,8 @@
 			font-weight: 500;
 			transition: text-shadow 0.3s;
 
-			&:hover {
+			&:hover,
+			&:focus {
 				text-shadow: var(--glow-strong);
 			}
 		}

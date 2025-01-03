@@ -36,3 +36,7 @@ body {
 turbo-frame {
 	display: contents;
 }
+
+[id] {
+	scroll-margin-top: 3rem;
+}

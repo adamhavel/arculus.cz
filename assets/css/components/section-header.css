@@ -15,8 +15,8 @@
 		position: absolute;
 		inset: 0;
 		background: var(--color-accent);
-		opacity: 0.2;
-		mix-blend-mode: multiply;
+		opacity: 0.1;
+		mix-blend-mode: hard-light;
 		z-index: 1;
 		border-radius: 0.7em;
 	}

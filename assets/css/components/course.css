@@ -1,16 +1,32 @@
 .course {
-    margin: 3em -2em;
+    margin: 3em -1.5em;
     background: var(--color-box);
-    padding: 2em;
+    padding: 1.5em;
     border-radius: 1em;
     display: grid;
     grid-template-columns: 8em 1fr;
     grid-template-rows: auto 1fr;
     column-gap: 3em;
     row-gap: .75em;
+    position: relative;
 
     h3 + & {
         margin-top: 2em;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        outline: 1px solid var(--color-accent);
+        border-radius: 1em;
+        opacity: 0;
+        transition: opacity .3s .75s;
+        filter: drop-shadow(var(--glow));
+    }
+
+    &:target::before {
+        opacity: .875;
     }
 }
 

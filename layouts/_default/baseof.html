@@ -22,5 +22,19 @@
     <main class="main">{{ block "main" . }}{{ end }}</main>
   </turbo-frame>
   {{ partial "footer.html" . }}
+  <script>
+    document.addEventListener('turbo:load', () => {
+      document.querySelectorAll('a[href*="#"]').forEach(link => {
+        link.setAttribute('data-turbo', 'false');
+      });
+    });
+
+    document.addEventListener('turbo:visit', (event) => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
 </body>
 </html>

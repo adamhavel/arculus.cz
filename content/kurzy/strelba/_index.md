@@ -9,7 +9,7 @@ weight: 1
 
 Naše střelecké kurzy jsou navrženy tak, aby vyhověly široké škále střelců – od úplných začátečníků bez zbrojního průkazu až po zkušené střelce, kteří hledají nové výzvy. Bez ohledu na vaši úroveň zkušeností vám pomůžeme zlepšit vaše dovednosti a získat jistotu při práci s krátkými i dlouhými střelnými zbraněmi.
 
-{{< events >}}
+{{< events id="strelba" >}}
 
 ### Co se naučíte?
 

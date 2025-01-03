@@ -8,7 +8,7 @@ weight: 2
 
 Naše kurzy taktiky (CQB – Close Quarters Battle) jsou ideální volbou pro všechny, kteří chtějí získat nové dovednosti ve vysoce dynamickém prostředí. Ať už jste civilní nadšenec, který touží zažít taktické operace na vlastní kůži, nebo profesionál hledající nové výzvy a přístupy, naše kurzy vám nabídnou jedinečnou příležitost.
 
-{{< events >}}
+{{< events id="taktika" >}}
 
 ### Co se naučíte?
 

@@ -1,4 +1,4 @@
-{{ $currentType := .Page.File.ContentBaseName }}
+{{ $id := .Get "id" }}
 
 {{ $courses := slice }}
 {{ range $key, $value := .Site.Data.courses }}
@@ -8,23 +8,58 @@
 
 {{ $events := slice }}
 {{ range $value := .Site.Data.events }}
-    {{ $events = $events | append $value }}
+    {{ with where $courses "id" $value.type }}
+        {{ $course := index . 0 }}
+        {{ if $course }}
+            {{ $eventData := merge $value (dict "title" $course.title "image" $course.image "section" $course.type) }}
+            {{ $events = $events | append $eventData }}
+        {{ end }}
+    {{ end }}
 {{ end }}
 
 {{ $matchingEvents := slice }}
-{{ range where $courses "type" $currentType }}
-    {{ $matchingEvents = $matchingEvents | append (where $events "type" .id) }}
+{{ with $id }}
+    {{ range where $courses "type" . }}
+        {{ $matchingEvents = $matchingEvents | append (where $events "type" .id) }}
+    {{ end }}
+{{ else }}
+    {{ $matchingEvents = $events }}
 {{ end }}
 
 {{ with $matchingEvents }}
-    <section class="events">
-        <h3>Nadcházející kurzy</h3>    
-        {{ range . }}
-            <div class="events__item">
-                <time datetime="{{ .time }}">{{ .time | time.Format "2.1.2006" }}</time>
-                <span class="events__location">{{ .location }}</span>
-                <span class="events__spots">Volná místa: {{ .spots }}</span>
-            </div>
+    {{ $availableEvents := where . "spots" "gt" 0 }}
+    {{ $fullEvents := where . "spots" "eq" 0 }}
+    
+    {{ $sortedAvailable := sort $availableEvents "time" }}
+    {{ $sortedFull := sort $fullEvents "time" }}
+    
+    {{ $allEvents := append $sortedFull $sortedAvailable  }}
+    
+    <h3>Nadcházející kurzy</h3>
+    <section class="events"> 
+        {{ range $allEvents }}
+            {{ $link := relref $ (printf "%s#%s" .section .type) }}
+            <section class="event {{ if eq .spots 0 }}event--full{{ end }}">
+                {{ with resources.Get .image }}
+                    {{ with .Resize "250x" }}
+                        <div class="event__image">
+                            <img src="{{ .RelPermalink }}" role="presentation" />
+                        </div>
+                    {{ end }}
+                {{ end }}
+                <header class="event__header">
+                    <h4 class="event__title"><a href="">{{ .title }}</a></h4>
+                    {{ if .spots }}
+                        <a class="event__cta" href="mailto:kurzy@arculus.cz?subject={{ .title }}" class="event__button">Přihlásit se</a>
+                    {{ end }}
+                </header>
+                <ul class="event__details">
+                    <li><strong>Datum</strong> <span><time class="event__time" datetime="{{ .time }}">{{ .time | time.Format ":date_long" }}</time></span></li>
+                    <li><strong>Místo</strong> <span>{{ .location }}</span></li>
+                    <li><strong>Volná místa</strong> <span>{{ .spots }}</span></li>
+                </ul>
+                <a href="{{ $link }}" class="event__overlay"></a>
+            </section>
         {{ end }}
     </section>
 {{ end }}

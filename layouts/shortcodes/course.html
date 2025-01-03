@@ -3,9 +3,11 @@
 {{ with $course }}
     <section class="course" id="{{ $id }}">
         {{ with resources.Get .image }}
-            <div class="course__image">
-                <img src="{{ .RelPermalink }}" role="presentation" />
-            </div>
+            {{ with .Resize "250x" }}
+                <div class="course__image">
+                    <img src="{{ .RelPermalink }}" role="presentation" />
+                </div>
+            {{ end }}
         {{ end }}
         <h4 class="course__title">{{ .title }}</h4>
         <div class="course__description">
