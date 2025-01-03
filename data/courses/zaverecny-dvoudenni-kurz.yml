@@ -1,17 +1,14 @@
 type: zdravoveda
 title: Závěrečný dvoudenní kurz
-description: |-
-  Kurz určený pro absolventy Zdravotnických kurzů I až III, kde dojde k
-  prověření vašich schopností získaných v předešlých kurzech. Je složen z
-  náročných modelových situací a zakončen písemným testem. Na jeho konci
-  dostanete certifikát o úspěšném absolvování.
-
-  - zopakování pojmů M.A.R.C.H.E (C.A.B.C.D.E), HOT ZONE, WARM ZONE, GREEN ZONE
-  - plánování, příprava materiálu, přehled ve vlastním vybavení
-  - příprava na modelové situace (kontrola vybavení a jeho příprava)
-  - práce jako jednotlivec, dvojice, tým
-  - modelové situace
-  - písemný test
+description: Kurz je zaměřen na komplexní prověření znalostí a dovedností
+  získaných v předchozích zdravotnických kurzech. Účastníci si zopakují klíčové
+  pojmy M.A.R.C.H.E. (C.A.B.C.D.E) a zóny HOT, WARM a GREEN, čímž si upevní své
+  teoretické základy. Důraz je kladen na plánování, efektivní přípravu materiálu
+  a organizaci vlastního vybavení. Součástí kurzu je příprava na simulace
+  krizových situací, včetně individuální práce, spolupráce ve dvojicích a týmu.
+  Vyvrcholením jsou náročné modelové situace, které prověří schopnost aplikace
+  naučených postupů v praxi. Kurz je zakončen písemným testem, po jehož úspěšném
+  zvládnutí účastníci obdrží certifikát potvrzující jejich kompetence.
 duration: 24
 price: 4500
 participants:
