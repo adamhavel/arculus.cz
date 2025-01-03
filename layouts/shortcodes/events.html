@@ -1,4 +1,5 @@
 {{ $currentType := .Page.File.ContentBaseName }}
+
 {{ $courses := slice }}
 {{ range $key, $value := .Site.Data.courses }}
     {{ $value = merge $value (dict "id" $key) }}
@@ -10,14 +11,20 @@
     {{ $events = $events | append $value }}
 {{ end }}
 
+{{ $matchingEvents := slice }}
 {{ range where $courses "type" $currentType }}
-    {{ $course := . }}
-    {{ $matchingEvents := where $events "type" .id }}
-    {{ range $matchingEvents }}
-        <div class="events__item">
-            <time datetime="{{ .time }}">{{ .time | time.Format "2.1.2006" }}</time>
-            <span class="events__location">{{ .location }}</span>
-            <span class="events__spots">Volná místa: {{ .spots }}</span>
-        </div>
-    {{ end }}
+    {{ $matchingEvents = $matchingEvents | append (where $events "type" .id) }}
+{{ end }}
+
+{{ with $matchingEvents }}
+    <section class="events">
+        <h3>Nadcházející kurzy</h3>    
+        {{ range . }}
+            <div class="events__item">
+                <time datetime="{{ .time }}">{{ .time | time.Format "2.1.2006" }}</time>
+                <span class="events__location">{{ .location }}</span>
+                <span class="events__spots">Volná místa: {{ .spots }}</span>
+            </div>
+        {{ end }}
+    </section>
 {{ end }}
