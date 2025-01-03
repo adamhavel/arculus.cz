@@ -23,6 +23,7 @@
         opacity: 0;
         transition: opacity .3s .75s;
         filter: drop-shadow(var(--glow));
+        pointer-events: none;
     }
 
     &:target::before {
@@ -58,6 +59,17 @@
         font-size: 0.75rem;
         opacity: 0.9;
         font-weight: 300;
+
+        a {
+            color: var(--color-accent);
+            font-weight: 400;
+            transition: text-shadow 0.3s;
+
+            &:hover,
+            &:focus {
+                text-shadow: var(--glow-strong);
+            }
+        }
     }
 
     .course__details {
