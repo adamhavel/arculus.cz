@@ -1,0 +1,23 @@
+{{ $currentType := .Page.File.ContentBaseName }}
+{{ $courses := slice }}
+{{ range $key, $value := .Site.Data.courses }}
+    {{ $value = merge $value (dict "id" $key) }}
+    {{ $courses = $courses | append $value }}
+{{ end }}
+
+{{ $events := slice }}
+{{ range $value := .Site.Data.events }}
+    {{ $events = $events | append $value }}
+{{ end }}
+
+{{ range where $courses "type" $currentType }}
+    {{ $course := . }}
+    {{ $matchingEvents := where $events "type" .id }}
+    {{ range $matchingEvents }}
+        <div class="events__item">
+            <time datetime="{{ .time }}">{{ .time | time.Format "2.1.2006" }}</time>
+            <span class="events__location">{{ .location }}</span>
+            <span class="events__spots">Volná místa: {{ .spots }}</span>
+        </div>
+    {{ end }}
+{{ end }}

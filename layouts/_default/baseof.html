@@ -8,11 +8,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
   {{ $opts := dict "inlineImports" true "noMap" true }}
-  {{ with resources.Get "css/style.css" | postCSS $opts | minify }}
+  {{- with resources.Get "css/style.css" | postCSS $opts | minify -}}
     <style>
       {{ .Content | safeCSS }}
     </style>
-  {{ end }}
+  {{- end -}}
   <script src="https://unpkg.com/@hotwired/turbo/dist/turbo.es2017-umd.js" type="module"></script>
 </head>
 <body>

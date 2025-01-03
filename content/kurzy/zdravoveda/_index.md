@@ -20,6 +20,12 @@ V závěru každého kurzu bude účastník ohodnocen, zda zvládá teorii a tec
 
 **Kurzy je možné po domluvě vést v anglickém jazyce.**
 
-{{< courses >}}
+{{< course id="kurz-prvni-pomoci" >}}
 
+{{< course id="zdravotnicky-kurz-i" >}}
 
+{{< course id="zdravotnicky-kurz-ii" >}}
+
+{{< course id="zdravotnicky-kurz-iii" >}}
+
+{{< course id="zaverecny-dvoudenni-kurz" >}}

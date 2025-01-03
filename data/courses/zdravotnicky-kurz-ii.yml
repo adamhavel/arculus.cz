@@ -1,16 +1,11 @@
 type: zdravoveda
 title: Zdravotnický kurz II
-description: >-
-  - zopakování pojmů M.A.R.C.H.E (C.A.B.C.D.E), HOT ZONE, WARM ZONE, GREEN ZONE
-
-  - práce v HOT ZONE – hrozící rizika, mechanika úrazu, komunikace se zraněným
-
+description: |-
+  - Zopakování pojmů M.A.R.C.H.E (C.A.B.C.D.E), HOT ZONE, WARM ZONE, GREEN ZONE
+  - Práce v HOT ZONE – hrozící rizika, mechanika úrazu, komunikace se zraněným
   - M – masivní krvácení, taktická škrtidla funkce a jejich použití
-
   - A – zprůchodnění dýchacích cest, evakuace, polohy
-
   - R – kvalita dechu, kontrola hrudníku, boků a zad (pneumotorax, použití chlopní, dekomprese)
-
   - C – krevní oběh, kontrola krvácení, stabilizace zlomenin dlouhých kostí
 duration: 8
 price: 1600

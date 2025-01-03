@@ -20,6 +20,7 @@ html {
 	background: var(--color-background);
 	color: var(--color-text);
 	overflow-y: scroll;
+	scroll-behavior: smooth;
 }
 
 body {

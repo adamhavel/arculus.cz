@@ -20,4 +20,27 @@ Ať už jste začátečník, který se chce naučit základy bezpečného ovlád
 
 **Všechny kurzy jsou zakončeny střeleckými drily. Počet úspěšných zásahů a čas těchto disciplín bude zapsán v certifikátu, který dostane absolvent po dokončení kurzu.**
 
-{{< courses >}}
+### Kurzy pro pistoli
+
+{{< course id="pistole-i" >}}
+
+{{< course id="pistole-ii" >}}
+
+{{< course id="pistole-iii" >}}
+
+### Kurzy pro pušku
+
+{{< course id="puska-i" >}}
+
+{{< course id="puska-ii" >}}
+
+{{< course id="puska-iii" >}}
+
+### Kombinovaný kurz
+
+{{< course id="combo-puska-pistole" >}}
+
+### Přípravné kurzy
+
+{{< course id="pripravny-kurz-na-ipsc-los" >}}
+

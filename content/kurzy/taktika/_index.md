@@ -17,4 +17,6 @@ Naše kurzy taktiky (CQB – Close Quarters Battle) jsou ideální volbou pro v�
 
 Naše kurzy vedou instruktoři s bohatými zkušenostmi z reálných situací. Jejich odborné znalosti a praxe vám zajistí kvalitní výuku a efektivní trénink. Navíc tréninkové prostředí a scénáře přizpůsobujeme vašim specifickým potřebám a cílům.
 
-{{< courses >}}
+{{< course id="close-quarter-battle" >}}
+
+{{< course id="cqb-se-strelbou" >}}
