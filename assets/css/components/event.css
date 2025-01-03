@@ -75,8 +75,9 @@
             width: 100%;
             opacity: .6;  
             filter: drop-shadow(var(--glow));
+            transition: opacity .2s, drop-shadow .2s;
 
-            .event--full & {
+            .event--full:not(:hover) & {
                 filter: grayscale(1);
                 opacity: .3;
             }

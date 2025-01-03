@@ -2,7 +2,7 @@
 title: Taktika
 description: Taktické myšlení, precizní plánování a rychlé reakce – zvládněte
   umění Close Quarters Battle.
-image: /images/image.jpg
+image: /images/taktika.jpg
 weight: 2
 ---
 
