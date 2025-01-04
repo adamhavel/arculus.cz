@@ -3,7 +3,7 @@ title: Kurzy
 description: Dovednosti, které mohou rozhodovat – naučte se střílet, jednat
   takticky a zachraňovat životy od profesionálů.
 image: /images/image.jpg
-weight: 1
+weight: 2
 ---
 
 Naše kurzy střelby, taktiky (CQB) a zdravovědy jsou navrženy tak, aby vám poskytly praktické znalosti a dovednosti, které skutečně využijete. Jsme tu pro všechny – od začátečníků až po pokročilé nadšence, kteří chtějí posunout své schopnosti na vyšší úroveň.
