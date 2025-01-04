@@ -3,7 +3,7 @@ title: Služby
 description: Bezpečnost není luxus, ale právo – a také odpovědnost. Reagovat
   nestačí. Klíčem je být o krok napřed.
 image: /images/image.jpg
-weight: 2
+weight: 1
 ---
 Každý policejní sbor je ve své podstatě reaktivní. Může zasáhnout až tehdy, když už je ohrožení nevyhnutelné – někdy ale tato pomoc přichází pozdě. My nabízíme něco víc. Jsme zde pro ty, kterým nestačí základní servis garantovaný zákony a Ústavou České republiky.
 
