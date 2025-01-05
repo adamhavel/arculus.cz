@@ -1,13 +1,17 @@
 type: zdravoveda
 title: Zdravotnický kurz I
-description: Kurz je zaměřen na zvládnutí základních principů záchrany života
-  podle konceptu M.A.R.C.H.E., přičemž se detailně věnuje pouze písmenům M
-  (masivní krvácení) a A (dýchací cesty). Účastníci se seznámí s významem a
-  použitím zón HOT, WARM a GREEN a osvojí si praktické postupy v HOT ZONE,
-  včetně identifikace hrozících rizik, mechaniky úrazu a komunikace se zraněným.
-  Důraz je kladen na techniky zástavy masivního krvácení, zprůchodnění dýchacích
-  cest, postupy evakuace a stabilizační polohy. Kurz nabízí praktický pohled na
-  klíčové kroky první pomoci v krizových situacích.
+description: >-
+  Kurz je zaměřen na úvod a seznámení se se základními principy a postupy dle
+  vojenských algoritmů M.A.R.C.H. a C.A.B.C.D.E., přičemž se budeme detailně
+  věnovat zástavě masivního krvácení a zajištění dýchacích cest. Představíme si
+  civilní i vojenský zdravotní materiál jako jsou různé druhy škrtidel,
+  obinadel, tlakových obvazů a hemostatických gáz. Velký důraz bude kladen na
+  techniky zástavy masivního krvácení, obvazové techniky junkčního poranění,
+  zprůchodnění dýchacích cest, postupy evakuace a stabilizační polohy. Účastníci
+  se seznámí s významem a použitím zón HOT, WARM a GREEN a osvojí si praktické
+  postupy v HOT ZONE a
+
+  taktické principy a postupy v ošetření a odsunu raněného pod palbou (CUF), včetně identifikace hrozících rizik, mechaniky úrazu a komunikace se zraněným. Kurz nabízí praktický pohled na klíčové kroky první pomoci v krizových situacích.
 duration: 8
 price: 1600
 participants:
