@@ -2,7 +2,7 @@
 title: Kurzy
 description: Dovednosti, které mohou rozhodovat – naučte se střílet, jednat
   takticky a zachraňovat životy od profesionálů.
-image: /images/image.jpg
+image: /images/kurzy.jpg
 weight: 2
 ---
 
