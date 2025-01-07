@@ -2,7 +2,7 @@
 title: Zdravověda
 description: První pomoc může rozhodovat mezi životem a smrtí – buďte připraveni
   jednat rychle a správně.
-image: /images/image.jpg
+image: /images/zdravoveda.jpg
 weight: 3
 ---
 

@@ -27,8 +27,14 @@
 {{ end }}
 
 {{ with $matchingEvents }}
-    {{ $availableEvents := where . "spots" "gt" 0 }}
-    {{ $fullEvents := where . "spots" "eq" 0 }}
+    {{ $futureEvents := slice }}
+    {{ range $matchingEvents }}
+        {{ if gt (time.AsTime .time) now }}
+        {{ $futureEvents = $futureEvents | append . }}
+        {{ end }}
+    {{ end }}
+    {{ $availableEvents := where $futureEvents "spots" "gt" 0 }}
+    {{ $fullEvents := where $futureEvents "spots" "eq" 0 }} 
     
     {{ $sortedAvailable := sort $availableEvents "time" }}
     {{ $sortedFull := sort $fullEvents "time" }}
