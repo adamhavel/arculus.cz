@@ -1,6 +1,6 @@
 ---
 title: Kontakt
-image: /images/image.jpg
+image: /images/kontakt.jpg
 weight: 4
 ---
 
