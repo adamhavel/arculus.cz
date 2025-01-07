@@ -2,3 +2,4 @@
 from = "/"
 to = "/sluzby"
 status = 302
+force = true
