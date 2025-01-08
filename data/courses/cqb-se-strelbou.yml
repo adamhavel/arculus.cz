@@ -1,7 +1,15 @@
 type: taktika
 title: CQB se střelbou
-description: >-
-  Jedná se o pokročilý kurz boje v uzavřených prostorách. Kurz se věnuje teorii a principu taktických postupů a střelbě v budovách, a to od základních metod až po pokročilé způsoby zajištění neznámých objektů a prostor, reakce a řešení rizik. Kurz se zaměřuje na bezpečný vstup a pohyb v budovách, následné bezpečné prohledání objektu, způsobu otevírání dveří, vcházení do místností, ale i na postupy a střelbu ve specifických prostorech jako jsou schodiště, chodby, haly apod. Kurz je určen pro pokročilé jedince, kteří absolvovali [střelecký kurz úrovně III]({{< relref "strelba#pistole-iii" >}}) nebo COMBO a základní kurz CQB. Lze udělit výjimku dle domluvy a ověření dovedností.
+description: Jedná se o pokročilý kurz boje v uzavřených prostorách. Kurz se
+  věnuje teorii a principu taktických postupů a střelbě v budovách, a to od
+  základních metod až po pokročilé způsoby zajištění neznámých objektů a
+  prostor, reakce a řešení rizik. Kurz se zaměřuje na bezpečný vstup a pohyb v
+  budovách, následné bezpečné prohledání objektu, způsobu otevírání dveří,
+  vcházení do místností, ale i na postupy a střelbu ve specifických prostorech
+  jako jsou schodiště, chodby, haly apod. Kurz je určen pro pokročilé jedince,
+  kteří absolvovali [střelecký kurz úrovně III]({{< relref "strelba#pistole-iii"
+  >}}) nebo [COMBO]({{< relref "strelba#combo-puska-pistole" >}}) a základní
+  kurz CQB. Lze udělit výjimku dle domluvy a ověření dovedností.
 duration: 6
 price: 4500
 participants:
