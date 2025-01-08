@@ -12,5 +12,4 @@ instructors:
   min: 2
 image: images/gun.png
 level: 3
-requirements:
-  - minimálně 200 nábojů
+requirements: []
