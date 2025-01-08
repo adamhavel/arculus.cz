@@ -17,5 +17,4 @@ instructors:
   min: 2
 image: /images/scope.png
 level: 2
-requirements:
-  - minimálně 250 nábojů
+requirements: []
