@@ -13,5 +13,4 @@ instructors:
   min: 2
 image: /images/bullet.png
 level: 4
-requirements:
-  - minimálně 200 nábojů pro každou zbraň
+requirements: []
