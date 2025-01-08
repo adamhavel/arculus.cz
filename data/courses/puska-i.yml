@@ -15,5 +15,4 @@ instructors:
   min: 2
 image: images/rifle.png
 level: 1
-requirements:
-  - minimálně 250 nábojů
+requirements: []
