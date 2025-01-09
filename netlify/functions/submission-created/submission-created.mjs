@@ -7,7 +7,7 @@ export default async (request, context) => {
 
 		console.log("Form data:", payload);
 
-		const filename = `${payload.name}.json`;
+		const filename = `${payload.id}/${payload.email}.csv`;
 		const store = getStore("events");
 
 		try {
@@ -17,7 +17,7 @@ export default async (request, context) => {
 			console.error("Error accessing store:", e);
 		}
 
-		await store.setJSON(filename, payload);
+		await store.set(filename, `E-mail\n${payload.email}`);
 
 		return new Response(
 			JSON.stringify({

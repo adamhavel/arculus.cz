@@ -67,6 +67,11 @@
                 </ul>
                 <a href="{{ $link }}" class="event__overlay"></a>
             </section>
+            <form name="test" method="post" data-netlify="true" data-turbo="false">
+                <input name="email" type="email" required />
+                <input name="id" type="hidden" value="{{ .id }}" required />
+                <button type="submit">Submit</button>
+            </form>
         {{ end }}
     </section>
 {{ end }}

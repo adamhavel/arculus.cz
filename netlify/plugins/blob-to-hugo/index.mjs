@@ -4,10 +4,11 @@ import path from "path";
 
 export default {
 	onPreBuild: async ({ utils, constants }) => {
+		const { IS_LOCAL, SITE_ID, NETLIFY_API_TOKEN } = constants;
+
 		try {
-			const { SITE_ID, NETLIFY_API_TOKEN } = constants;
 			const store = getStore({
-				name: "events",
+				name: IS_LOCAL ? "site:events" : "events",
 				siteID: SITE_ID,
 				token: NETLIFY_API_TOKEN,
 			});
