@@ -7,7 +7,7 @@ export default async (request, context) => {
 
 		console.log("Form data:", payload);
 
-		const filename = `${payload.name}.csv`;
+		const filename = `${payload.name}.json`;
 		const store = getStore("events");
 
 		try {
