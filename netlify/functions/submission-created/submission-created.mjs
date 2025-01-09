@@ -4,6 +4,7 @@ export default async (request, context) => {
 	try {
 		const data = await request.json();
 		const { payload } = data;
+		const { BUILD_HOOK_URL } = process.env;
 
 		console.log("Form data:", payload);
 
@@ -17,7 +18,13 @@ export default async (request, context) => {
 			console.error("Error accessing store:", e);
 		}
 
-		await store.set(filename, `E-mail\n${payload.email}`);
+		await store.set(filename, `E-mail\n${payload.email}`, {
+			metadata: {
+				"Content-Type": "text/csv",
+			},
+		});
+
+		await fetch(BUILD_HOOK_URL, { method: "POST" });
 
 		return new Response(
 			JSON.stringify({
