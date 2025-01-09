@@ -45,6 +45,7 @@
     <section class="events"> 
         {{ range $allEvents }}
             {{ $attendees := default 0 (index $.Site.Data.attendance .id) }}
+            {{ $spotsLeft := math.Max (sub .spots $attendees) 0 }}
             {{ $link := relref $ (printf "%s#%s" .section .type) }}
             <section class="event {{ if eq .spots 0 }}event--full{{ end }}">
                 {{ with resources.Get .image }}
@@ -63,15 +64,17 @@
                 <ul class="event__details">
                     <li><strong>Datum</strong> <span><time class="event__time" datetime="{{ .time }}">{{ .time | time.Format ":date_long" }}</time></span></li>
                     <li><strong>Místo</strong> <span>{{ .location }}</span></li>
-                    <li><strong>Volná místa</strong> <span>{{ math.Max (sub .spots $attendees) 0 }}</span></li>
+                    <li><strong>Volná místa</strong> <span>{{ $spotsLeft }}</span></li>
                 </ul>
                 <a href="{{ $link }}" class="event__overlay"></a>
             </section>
-            <form name="test" method="post" data-netlify="true" data-turbo="false">
-                <input name="email" type="email" required />
-                <input name="id" type="hidden" value="{{ .id }}" required />
-                <button type="submit">Submit</button>
-            </form>
+            {{ if $spotsLeft }}
+                <form name="register" method="post" data-netlify="true" data-turbo="false">
+                    <input name="email" type="email" required />
+                    <input name="id" type="hidden" value="{{ .id }}" required />
+                    <button type="submit">Submit</button>
+                </form>
+            {{ end }}
         {{ end }}
     </section>
 {{ end }}
