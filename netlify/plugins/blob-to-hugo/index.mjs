@@ -7,7 +7,7 @@ export default {
 		try {
 			const { SITE_ID, NETLIFY_API_TOKEN } = constants;
 			const store = getStore({
-				name: "site:events",
+				name: "events",
 				siteID: SITE_ID,
 				token: NETLIFY_API_TOKEN,
 			});
@@ -18,7 +18,7 @@ export default {
 				events.map(async (directory) => {
 					const eventId = directory.replace(/\/$/, '');
 					const { blobs: attendees } = await store.list({ prefix: directory });
-					
+
 					return [eventId, attendees.length];
 				})
 			);
