@@ -1,6 +1,6 @@
-import { getStore } from "@netlify/blobs";
-import { promises as fs } from "fs";
-import path from "path";
+import { getStore } from '@netlify/blobs';
+import { promises as fs } from 'fs';
+import path from 'path';
 
 export default {
 	onPreBuild: async ({ utils, constants }) => {
@@ -8,7 +8,7 @@ export default {
 
 		try {
 			const store = getStore({
-				name: IS_LOCAL ? "site:events" : "events",
+				name: IS_LOCAL ? 'site:events' : 'events',
 				siteID: SITE_ID,
 				token: NETLIFY_API_TOKEN,
 			});
@@ -20,8 +20,8 @@ export default {
 					const eventCsv = await store.get(key);
 
 					return [
-						key.replace(".csv", ""),
-						eventCsv.split("\n").length - 1,
+						key.replace('.csv', ''),
+						eventCsv.split('\n').length - 1,
 					];
 				})
 			);
@@ -29,13 +29,13 @@ export default {
 			const attendance = Object.fromEntries(eventEntries);
 
 			await fs.writeFile(
-				"data/attendance.json",
+				'data/attendance.json',
 				JSON.stringify(attendance, null, 2)
 			);
 
 			console.log(`Created attendance.json with ${events.length} entries`);
 		} catch (error) {
-			utils.build.failBuild("Failed to process events", {
+			utils.build.failBuild('Failed to process events', {
 				error,
 			});
 		}
