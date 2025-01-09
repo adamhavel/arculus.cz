@@ -31,11 +31,9 @@ export default {
 				JSON.stringify(attendance, null, 2)
 			);
 
-			console.log(
-				`✅ Created attendance.json with ${events.length} entries`
-			);
+			console.log(`Created attendance.json with ${events.length} entries`);
 		} catch (error) {
-			utils.build.failBuild("Failed to process form submissions", {
+			utils.build.failBuild("Failed to process events", {
 				error,
 			});
 		}
