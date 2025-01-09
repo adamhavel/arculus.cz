@@ -8,17 +8,13 @@ export default async (request, context) => {
 
 		console.log("Form data:", payload);
 
-		const filename = `${payload.data.id}/${payload.data.email}.csv`;
+		const filename = `${payload.data.id}.csv`;
 		const store = getStore("events");
+		let content = await store.get(filename);
 
-		try {
-			const list = await store.list();
-			console.log("Current store contents:", list);
-		} catch (e) {
-			console.error("Error accessing store:", e);
-		}
+		content = content ? content + `\n${payload.data.email}` : `E-mail\n${payload.data.email}`;
 
-		await store.set(filename, `E-mail\n${payload.email}`, {
+		await store.set(filename, content, {
 			metadata: {
 				"Content-Type": "text/csv",
 			},
