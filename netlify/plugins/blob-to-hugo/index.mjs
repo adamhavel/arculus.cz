@@ -13,14 +13,16 @@ export default {
 				token: NETLIFY_API_TOKEN,
 			});
 
-			const { directories: events } = await store.list({ directories: true });
+			const { blobs: events } = await store.list();
 
 			const eventEntries = await Promise.all(
-				events.map(async (directory) => {
-					const eventId = directory.replace(/\/$/, '');
-					const { blobs: attendees } = await store.list({ prefix: directory });
+				events.map(async ({ key }) => {
+					const eventCsv = await store.get(key);
 
-					return [eventId, attendees.length];
+					return [
+						key.replace(".csv", ""),
+						eventCsv.split("\n").length - 1,
+					];
 				})
 			);
 
