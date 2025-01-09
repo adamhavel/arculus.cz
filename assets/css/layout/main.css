@@ -10,13 +10,11 @@
 
 	> p {
 		text-wrap: pretty;
-		opacity: 0.9;
 		font-weight: 300;
 	}
 
 	> ul {
 		font-weight: 300;
-		opacity: 0.9;
 		text-wrap: pretty;
 
 		+ p {
@@ -68,6 +66,5 @@
 		font-size: 1.25rem;
 		letter-spacing: 0.05em;
 		font-weight: 500;
-		opacity: .9;
 	}
 }

@@ -1,0 +1,8 @@
+{
+  "name": "netlify-plugin-blob-to-hugo",
+  "version": "1.0.0",
+  "main": "index.mjs",
+  "dependencies": {
+    "@netlify/blobs": "^6.3.0"
+  }
+}
