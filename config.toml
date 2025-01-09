@@ -2,10 +2,10 @@ baseURL = "http://arculus.cz"
 languageCode = "cs-cz"
 defaultContentLanguage = "cs"
 title = "Arculus"
-disableKinds = ["taxonomy", "taxonomyTerm", "sitemap", "RSS"]
+disableKinds = ["taxonomy", "sitemap", "RSS"]
 
 [server]
-  [[server.headers]]
+  [[server.headers]] 
     for = "/*"
     [server.headers.values]
       Cache-Control = "no-cache"

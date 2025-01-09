@@ -3,3 +3,6 @@ from = "/"
 to = "/sluzby"
 status = 302
 force = true
+
+[[plugins]]
+package = "./netlify/plugins/blob-to-hugo"

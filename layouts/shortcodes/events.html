@@ -7,11 +7,11 @@
 {{ end }}
 
 {{ $events := slice }}
-{{ range $value := .Site.Data.events }}
+{{ range $key, $value := .Site.Data.events }}
     {{ with where $courses "id" $value.type }}
         {{ $course := index . 0 }}
         {{ if $course }}
-            {{ $eventData := merge $value (dict "title" $course.title "image" $course.image "section" $course.type) }}
+            {{ $eventData := merge $value (dict "id" $key "title" $course.title "image" $course.image "section" $course.type) }}
             {{ $events = $events | append $eventData }}
         {{ end }}
     {{ end }}
@@ -44,6 +44,7 @@
     <h3>Nadcházející kurzy</h3>
     <section class="events"> 
         {{ range $allEvents }}
+            {{ $attendees := default 0 (index $.Site.Data.attendance .id) }}
             {{ $link := relref $ (printf "%s#%s" .section .type) }}
             <section class="event {{ if eq .spots 0 }}event--full{{ end }}">
                 {{ with resources.Get .image }}
@@ -62,7 +63,7 @@
                 <ul class="event__details">
                     <li><strong>Datum</strong> <span><time class="event__time" datetime="{{ .time }}">{{ .time | time.Format ":date_long" }}</time></span></li>
                     <li><strong>Místo</strong> <span>{{ .location }}</span></li>
-                    <li><strong>Volná místa</strong> <span>{{ .spots }}</span></li>
+                    <li><strong>Volná místa</strong> <span>{{ math.Max (sub .spots $attendees) 0 }}</span></li>
                 </ul>
                 <a href="{{ $link }}" class="event__overlay"></a>
             </section>
