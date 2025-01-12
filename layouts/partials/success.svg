@@ -1,0 +1,19 @@
+<svg
+   version="1.1"
+   viewBox="48 9.5 499.62149 576.91321"
+   xmlns="http://www.w3.org/2000/svg"
+>
+   <style>
+      .check,
+      .rim {
+         fill: none;
+         stroke: currentColor;
+         stroke-width: 33;
+      }
+   </style>
+   <path class="check" d="M 188.44629,315.31554 273.04424,395.39299 407.3677,229.42602" />
+   <path
+      class="rim"
+      d="M 531.02,432.25 L 297.72,567.15 L 64.42,432.25 L 64.42,165.85 L 297.72,28.55 L 531.02,165.85 Z"
+   />
+</svg>

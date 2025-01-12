@@ -1,21 +1,28 @@
 :root {
-  --color-background: #151515;
-  --color-box: rgba(0, 0, 0, 0.2);
-  --color-text: rgba(255, 255, 255, 0.7);
-  --color-accent: rgb(34, 170, 34);
-  --color-error: rgba(255, 0, 0, .8);
-  --glow: 0 0 0.2em var(--color-accent);
-  --glow-weak: 0 0 0.1em var(--color-accent);
-  --glow-strong: 0 0 0.5em var(--color-accent);
-  --glow-error: 0 0 0.2em var(--color-error);
-  --glow-error-strong: 0 0 0.5em var(--color-error);
-  --transition-default: 0.3s;
-  --background-scanlines: linear-gradient(
-    rgba(0, 0, 0, 0) 50%,
-    var(--color-background) 50%
-  );
-  --clip-hexagon: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  --ratio-hexagon: 0.866;
+	--color-background: #151515;
+	--color-box: rgba(0, 0, 0, 0.2);
+	--color-text: rgba(255, 255, 255, 0.7);
+	--color-accent: rgb(34, 170, 34);
+	--color-error: rgba(255, 0, 0, 0.8);
+	--glow: 0 0 0.2em var(--color-accent);
+	--glow-weak: 0 0 0.1em var(--color-accent);
+	--glow-strong: 0 0 0.5em var(--color-accent);
+	--glow-error: 0 0 0.2em var(--color-error);
+	--glow-error-strong: 0 0 0.5em var(--color-error);
+	--transition-default: 0.3s;
+	--background-scanlines: linear-gradient(
+		rgba(0, 0, 0, 0) 50%,
+		var(--color-background) 50%
+	);
+	--clip-hexagon: polygon(
+		50% 0%,
+		100% 25%,
+		100% 75%,
+		50% 100%,
+		0% 75%,
+		0% 25%
+	);
+	--ratio-hexagon: 0.866;
 }
 
 @keyframes scanlines {
@@ -40,15 +47,15 @@
 }
 
 @font-face {
-    font-family: 'Arculus';
-    src: url('/fonts/arculus.woff2') format('woff2');
-    font-weight: 300;
-    font-style: normal;
+	font-family: "Arculus";
+	src: url("/fonts/arculus.woff2") format("woff2");
+	font-weight: 300;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: 'Sora';
-    src: url('/fonts/sora.woff2') format('woff2');
-    font-style: normal;
-    font-display: swap;
+	font-family: "Sora";
+	src: url("/fonts/sora.woff2") format("woff2");
+	font-style: normal;
+	font-display: swap;
 }

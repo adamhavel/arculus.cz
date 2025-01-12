@@ -28,15 +28,15 @@
 	transition: opacity 0.2s;
 	filter: drop-shadow(var(--glow-weak));
 	z-index: 1;
-    cursor: pointer;
-    color: transparent;
+	cursor: pointer;
+	color: transparent;
 
 	&:hover,
 	&:focus {
 		opacity: 0.875;
 	}
 
-	.event--form-active & {
+	.event--expanded & {
 		display: none;
 	}
 }
@@ -72,7 +72,7 @@
 		text-shadow: var(--glow-strong);
 	}
 
-	.event--form-active & {
+	.event--expanded & {
 		opacity: 0;
 		pointer-events: none;
 	}
@@ -128,36 +128,42 @@
 }
 
 .event__form-wrapper {
-    grid-column: span 2;
+	grid-column: span 2;
 }
 
-.event__form {
-	--form-height: 1000px;
+.event__collapsible {
+	--height: 1000px;
 
 	max-height: 0;
 	opacity: 0;
 	overflow: hidden;
 	transition: max-height 0.3s ease-out, transform 0.3s, opacity 0.3s;
 	transform: translateY(-1em);
-    pointer-events: none;
+	pointer-events: none;
+	grid-column: span 2;
 
-	.event--form-active & {
-		max-height: var(--form-height);
+	.event--expanded & {
+		max-height: var(--height);
 		opacity: 1;
 		transform: none;
 		transition: max-height 0.3s ease-out, transform 0.5s, opacity 0.3s 0.2s;
-        pointer-events: initial;
+		pointer-events: initial;
 	}
+}
 
+.event__content {
+	margin-top: 1.5em;
+	margin-bottom: 0.25em;
+	padding: 1.25em;
+	background: var(--color-box);
+	border-radius: 0.875em;
+}
+
+.event__form {
 	fieldset {
 		display: flex;
 		flex-direction: column;
 		gap: 0.75em;
-		margin-top: 1.5em;
-		margin-bottom: 0.25em;
-		padding: 1.25em;
-		background: var(--color-box);
-		border-radius: 0.875em;
 	}
 
 	h5 {
@@ -233,7 +239,7 @@
 		transition: color 0.2s;
 		line-height: 1;
 		width: 85%;
-        font-family: monospace;
+		font-family: monospace;
 	}
 
 	footer {
@@ -244,26 +250,58 @@
 
 	button {
 		cursor: pointer;
-        border: 1px solid currentColor;
-        outline: 1px solid transparent;
+		border: 1px solid currentColor;
+		outline: 1px solid transparent;
 		padding: 0.875em 1.25em;
 		font-weight: 500;
 		letter-spacing: 0.1em;
 		text-transform: uppercase;
 		font-size: 0.725rem;
 		border-radius: 0.5em;
-        color: var(--color-accent);
-        transition: outline-color .2s;
-        filter: drop-shadow(var(--glow));
+		color: var(--color-accent);
+		transition: outline-color 0.2s;
+		filter: drop-shadow(var(--glow));
 
 		&:hover,
 		&:focus {
-            outline-color: currentColor;
+			outline-color: currentColor;
 		}
 
 		&[type="reset"] {
 			color: var(--color-error);
-            filter: drop-shadow(var(--glow-error));
+			filter: drop-shadow(var(--glow-error));
 		}
+	}
+}
+
+.event__message {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1em;
+	gap: 1em;
+
+	svg {
+		display: block;
+		width: 3em;
+		color: var(--color-accent);
+		filter: drop-shadow(var(--glow-strong));
+
+		.check,
+        .rim {
+			animation: appear 3s;
+		}
+	}
+
+	p {
+		text-align: center;
+		font-size: 0.875em;
+		font-weight: 400;
+	}
+}
+
+@keyframes appear {
+	from {
+		stroke-width: 0;
 	}
 }

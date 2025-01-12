@@ -1,5 +1,9 @@
 {{ define "main" }}
     <turbo-frame id="form">
-        {{ .Content }}
+        <div class="event__message">
+            {{ partial "success.svg" . }}
+
+            <p><strong>Děkujeme za přihlášku.</strong><br />V nejbližší době vás budeme kontaktovat.</p>
+        </div>
     </turbo-frame>
 {{ end }}
