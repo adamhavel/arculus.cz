@@ -19,8 +19,6 @@ export default async (request, context) => {
 		const store = getStore('events');
 		let content = await store.get(filename);
 
-		console.log('Form data:', payload);
-
 		const headers = Object.values(columns).join(',');
 		const row = Object.keys(columns)
 			.map((key) => payload.data[key])

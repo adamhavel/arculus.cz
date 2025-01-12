@@ -127,13 +127,16 @@
 	}
 }
 
+.event__form-wrapper {
+    grid-column: span 2;
+}
+
 .event__form {
 	--form-height: 1000px;
 
 	max-height: 0;
 	opacity: 0;
 	overflow: hidden;
-	grid-column: span 2;
 	transition: max-height 0.3s ease-out, transform 0.3s, opacity 0.3s;
 	transform: translateY(-1em);
     pointer-events: none;
@@ -230,6 +233,7 @@
 		transition: color 0.2s;
 		line-height: 1;
 		width: 85%;
+        font-family: monospace;
 	}
 
 	footer {
