@@ -66,7 +66,7 @@ export default async (request) => {
 	);
 
 	if (isBot) {
-		return new Response(null, { status: 401 });
+		//return new Response(null, { status: 401 });
 	}
 };
 
