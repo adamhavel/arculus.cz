@@ -1,4 +1,4 @@
-baseURL = "http://arculus.cz"
+baseURL = "https://arculus.cz"
 languageCode = "cs-cz"
 defaultContentLanguage = "cs"
 title = "Arculus"
