@@ -2,79 +2,126 @@
 
 {{ $courses := slice }}
 {{ range $key, $value := .Site.Data.courses }}
-    {{ $value = merge $value (dict "id" $key) }}
-    {{ $courses = $courses | append $value }}
+{{ $value = merge $value (dict "id" $key) }}
+{{ $courses = $courses | append $value }}
 {{ end }}
 
 {{ $events := slice }}
 {{ range $key, $value := .Site.Data.events }}
-    {{ with where $courses "id" $value.type }}
-        {{ $course := index . 0 }}
-        {{ if $course }}
-            {{ $eventData := merge $value (dict "id" $key "title" $course.title "image" $course.image "section" $course.type) }}
-            {{ $events = $events | append $eventData }}
-        {{ end }}
-    {{ end }}
+{{ with where $courses "id" $value.type }}
+{{ $course := index . 0 }}
+{{ if $course }}
+{{ $eventData := merge $value (dict "id" $key "title" $course.title "image" $course.image "section" $course.type) }}
+{{ $events = $events | append $eventData }}
+{{ end }}
+{{ end }}
 {{ end }}
 
 {{ $matchingEvents := slice }}
 {{ with $id }}
-    {{ range where $courses "type" . }}
-        {{ $matchingEvents = $matchingEvents | append (where $events "type" .id) }}
-    {{ end }}
+{{ range where $courses "type" . }}
+{{ $matchingEvents = $matchingEvents | append (where $events "type" .id) }}
+{{ end }}
 {{ else }}
-    {{ $matchingEvents = $events }}
+{{ $matchingEvents = $events }}
 {{ end }}
 
 {{ with $matchingEvents }}
-    {{ $futureEvents := slice }}
-    {{ range $matchingEvents }}
-        {{ if gt (time.AsTime .time) now }}
-        {{ $futureEvents = $futureEvents | append . }}
-        {{ end }}
-    {{ end }}
-    {{ $availableEvents := where $futureEvents "spots" "gt" 0 }}
-    {{ $fullEvents := where $futureEvents "spots" "eq" 0 }} 
-    
-    {{ $sortedAvailable := sort $availableEvents "time" }}
-    {{ $sortedFull := sort $fullEvents "time" }}
-    
-    {{ $allEvents := append $sortedFull $sortedAvailable  }}
-    
-    <h3>Nadcházející kurzy</h3>
-    <section class="events"> 
-        {{ range $allEvents }}
-            {{ $attendees := default 0 (index $.Site.Data.attendance .id) }}
-            {{ $spotsLeft := math.Max (sub .spots $attendees) 0 }}
-            {{ $link := relref $ (printf "%s#%s" .section .type) }}
-            <section class="event {{ if eq .spots 0 }}event--full{{ end }}">
-                {{ with resources.Get .image }}
-                    {{ with .Resize "250x" }}
-                        <div class="event__image">
-                            <img src="{{ .RelPermalink }}" role="presentation" />
-                        </div>
-                    {{ end }}
+{{ $futureEvents := slice }}
+{{ range $matchingEvents }}
+{{ if gt (time.AsTime .time) now }}
+{{ $futureEvents = $futureEvents | append . }}
+{{ end }}
+{{ end }}
+{{ $availableEvents := where $futureEvents "spots" "gt" 0 }}
+{{ $fullEvents := where $futureEvents "spots" "eq" 0 }}
+
+{{ $sortedAvailable := sort $availableEvents "time" }}
+{{ $sortedFull := sort $fullEvents "time" }}
+
+{{ $allEvents := append $sortedFull $sortedAvailable }}
+
+<h3>Nadcházející kurzy</h3>
+<section class="events">
+    {{ range $allEvents }}
+        {{ $attendees := default 0 (index $.Site.Data.attendance .id) }}
+        {{ $spotsLeft := math.Max (sub .spots $attendees) 0 }}
+        {{ $link := relref $ (printf "%s#%s" .section .type) }}
+        <section class="event {{ if eq .spots 0 }}event--full{{ end }}">
+            {{ with resources.Get .image }}
+                {{ with .Resize "250x" }}
+                    <div class="event__image">
+                        <img src="{{ .RelPermalink }}" role="presentation" />
+                    </div>
                 {{ end }}
-                <header class="event__header">
-                    <h4 class="event__title"><a href="">{{ .title }}</a></h4>
-                    {{ if .spots }}
-                        <a class="event__cta" href="mailto:kurzy@arculus.cz?subject={{ .title }}" class="event__button">Přihlásit se</a>
-                    {{ end }}
-                </header>
-                <ul class="event__details">
-                    <li><strong>Datum</strong> <span><time class="event__time" datetime="{{ .time }}">{{ .time | time.Format ":date_long" }}</time></span></li>
-                    <li><strong>Místo</strong> <span>{{ .location }}</span></li>
-                    <li><strong>Volná místa</strong> <span>{{ $spotsLeft }}</span></li>
-                </ul>
-                <a href="{{ $link }}" class="event__overlay"></a>
-            </section>
+            {{ end }}
+            <header class="event__header">
+                <h4 class="event__title">{{ .title }}</h4>
+                {{ if .spots }}
+                    <button
+                        class="event__cta"
+                        type="button" 
+                        onclick="
+                            const form = this.closest('.event').querySelector('.event__form');
+
+                            form.style.setProperty('--form-height', form.scrollHeight + 'px');
+                            this.closest('.event').classList.toggle('event--form-active');
+                            form.querySelector('label input').focus();
+                        "
+                    >
+                        Přihlásit se
+                    </button>
+                {{ end }}
+            </header>
+            <ul class="event__details">
+                <li><strong>Datum</strong> <span><time class="event__time" datetime="{{ .time }}">{{ .time | time.Format
+                            ":date_long" }}</time></span></li>
+                <li><strong>Místo</strong> <span>{{ .location }}</span></li>
+                <li><strong>Volná místa</strong> <span>{{ $spotsLeft }}</span></li>
+            </ul>
+            <a href="{{ $link }}" class="event__overlay">Více informací</a>
             {{ if $spotsLeft }}
-                <form name="register" method="post" data-netlify="true" data-turbo="false">
-                    <input name="email" type="email" required />
+                <form class="event__form" name="register" method="post" data-netlify="true" data-turbo="false">
                     <input name="id" type="hidden" value="{{ .id }}" required />
-                    <button type="submit">Submit</button>
+                    <fieldset>
+                        <h5>Fakturační údaje</h5>
+                        <label>
+                            <span>Jméno</span>
+                            <input placeholder="" name="name" type="text" required />
+                        </label>
+                        <label>
+                            <span>Příjmení</span>
+                            <input placeholder="" name="surname" type="text" required />
+                        </label>
+                        <label>
+                            <span>Telefon</span>
+                            <input placeholder="" name="phone" type="tel"  pattern="^(?:\+[1-9]\d{0,2}\s*)?(?:\d[\s]*){9,10}$" title="Zadejte platné telefonní číslo (9-10 číslic, volitelně s předvolbou 1-3 číslice)" required />
+                        </label>
+                        <label>
+                            <span>E-mail</span>
+                            <input placeholder="" name="email" type="email" required />
+                        </label>
+                        <label>
+                            <span>Adresa</span>
+                            <input placeholder="" name="address" type="text" required />
+                        </label>
+                        <label>
+                            <span>Město</span>
+                            <input placeholder="" name="city" type="text" required />
+                        </label>
+                        <label>
+                            <span>PSČ</span>
+                            <input placeholder="" name="postcode" type="text" pattern="\d{3}[ ]?\d{2}" title="Zadejte PSČ ve formátu 12345 nebo 123 45"
+                                required />
+                        </label>
+                        <footer>
+                            <button type="submit">Potvrdit</button>
+                            <button type="reset" onclick="this.closest('.event').classList.toggle('event--form-active');">Zrušit</button>
+                        </footer>
+                    </fieldset>
                 </form>
             {{ end }}
-        {{ end }}
-    </section>
+        </section>
+    {{ end }}
+</section>
 {{ end }}

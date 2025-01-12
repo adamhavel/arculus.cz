@@ -6,9 +6,9 @@ export default async (request, context) => {
 		const { payload } = data;
 		const { BUILD_HOOK_URL } = process.env;
 		const filename = `${payload.data.id}.csv`;
-		const store = getStore("events");
+		const store = getStore('events');
 		let content = await store.get(filename);
-		
+
 		console.log('Form data:', payload);
 
 		content = content ? content + `\n${payload.data.email}` : `E-mail\n${payload.data.email}`;

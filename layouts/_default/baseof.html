@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  <title>{{ .Title }} – {{ .Site.Title }}</title>
+  <meta name="description" content="{{ .Description }}">
   <link rel="preload" href="/fonts/arculus.woff2" as="font" type="font/woff2" crossorigin>
+  {{ partial "favicons.html" . }}
   {{ $opts := dict "inlineImports" true "noMap" true }}
   {{- with resources.Get "css/style.css" | postCSS $opts | minify -}}
     <style>
