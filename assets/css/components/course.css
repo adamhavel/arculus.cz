@@ -10,6 +10,11 @@
     row-gap: .75em;
     position: relative;
 
+    @media (max-width: 900px) {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
     h3 + & {
         margin-top: 2em;
     }

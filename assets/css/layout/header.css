@@ -1,6 +1,10 @@
 .header {
 	grid-column: 1;
 	grid-row: 1;
+
+	@media (max-width: 900px) {
+		
+	}
 }
 
 .header__title {
@@ -78,4 +82,25 @@
             transform: rotateY(40deg);
         }
     }
+
+	@media (max-width: 900px) {
+		transform: none;	
+		color: var(--color-accent);
+		
+		svg {
+            opacity: .8;
+			width: 1.5em;
+            transform: none;
+            filter: drop-shadow(var(--glow));
+        }
+
+		p {
+			opacity: .8;
+            text-shadow: var(--glow-strong);
+		}
+
+		a:before {
+			opacity: .35;
+		}
+	}
 }

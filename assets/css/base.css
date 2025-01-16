@@ -13,7 +13,7 @@
 
 html {
 	font-family: Sora, "Helvetica", sans-serif;
-	padding: 5em;
+	padding: 5em 3em;
 	font-size: 1rem;
 	line-height: 1.75;
 	display: flex;
@@ -23,6 +23,14 @@ html {
 	color: var(--color-text);
 	overflow-y: scroll;
 	scroll-behavior: smooth;
+
+	@media (max-width: 1200px) {
+		padding: 1.5em 3em;
+	}
+
+	@media (max-width: 900px) {
+		padding: 2em 1.5em;
+	}
 }
 
 input, textarea, select {
@@ -32,11 +40,20 @@ input, textarea, select {
 body {
 	flex: 1;
 	display: grid;
-	grid-template-columns: min-content 45em;
+	grid-template-columns: min-content auto;
 	grid-template-rows: auto 1fr auto;
 	column-gap: 5em;
 	row-gap: 4em;
 	margin: 0 auto;
+
+	@media (max-width: 1200px) {
+		column-gap: 2em;
+	}
+
+	@media (max-width: 900px) {
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 2em;
+	}
 }
 
 turbo-frame {

@@ -1,4 +1,7 @@
 <nav class="nav">
+  <button class="nav__toggle" onclick="this.closest('.nav').querySelector('.nav__list').classList.toggle('is-active')">
+    {{ .Params.menuTitle | default .Title }}
+  </button>
   <ul class="nav__list">
     {{ range sort .Site.Sections.ByWeight }}
     <li class="nav__item">

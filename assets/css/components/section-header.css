@@ -3,6 +3,11 @@
 	margin: 0 -1.5em 3em;
 	padding: 1.375em 1.5em;
 	background: var(--color-box);
+
+	@media (max-width: 900px) {
+		margin-left: 0;
+		margin-right: 0;
+	}
 }
 
 .section-header__image {
@@ -15,7 +20,7 @@
 		position: absolute;
 		inset: 0;
 		background: var(--color-accent);
-		opacity: 0.2;
+		opacity: 0;
 		mix-blend-mode: hard-light;
 		z-index: 1;
 		border-radius: 0.7em;
@@ -44,6 +49,7 @@
 		object-fit: cover;
 		border-radius: 0.7em;
 		object-position: bottom center;
+		border: 2px solid rgba(0, 0, 0, 0.5);
 	}
 }
 
@@ -67,7 +73,7 @@
 
 .section-header__description {
 	font-size: 0.75em;
-	opacity: 0.5;
+	opacity: 0.75;
 	text-wrap: balance;
 	text-align: right;
 	max-width: 50%;

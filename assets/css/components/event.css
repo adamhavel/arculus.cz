@@ -288,7 +288,7 @@
 		filter: drop-shadow(var(--glow-strong));
 
 		.check,
-        .rim {
+		.rim {
 			animation: appear 3s;
 		}
 	}
