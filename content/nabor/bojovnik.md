@@ -1,7 +1,7 @@
 ---
 title: Bojovník
 description: ""
-image: /images/image.jpg
+image: /images/nabor.jpg
 weight: 1
 ---
 
